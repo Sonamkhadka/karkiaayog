@@ -161,6 +161,14 @@
         <a href="#faq" class="nav-link" data-en="FAQ" data-ne="प्रश्नोत्तर">FAQ</a>
       </nav>
       <div class="header-actions">
+        <!-- GitHub Link -->
+        <a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" class="nav-github-link" aria-label="GitHub Repository" title="Star on GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span class="nav-github-stars" id="navGithubStars" style="display: none;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span class="count-number">0</span>
+          </span>
+        </a>
         <!-- Language Toggle -->
         <button class="lang-toggle" id="langToggle" aria-label="Switch to Nepali">
           <span class="lang-label">ने</span>
@@ -212,9 +220,13 @@
             <span data-en="Read the Summary" data-ne="सारांश पढ्नुहोस्">Read the Summary</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </a>
-          <a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" class="hero-share-button hero-github-link" data-en="Contribute on GitHub" data-ne="GitHub मा योगदान गर्नुहोस्">
+          <a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" class="hero-share-button hero-github-link" title="Star this project on GitHub">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            <span data-en="Contribute on GitHub" data-ne="GitHub मा योगदान गर्नुहोस्">Contribute on GitHub</span>
+            <span data-en="Star on GitHub" data-ne="GitHub मा स्टार गर्नुहोस्">Star on GitHub</span>
+            <div class="github-star-count" id="githubStarCount" style="display: none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span class="count-number">0</span>
+            </div>
           </a>
           <button type="button" class="hero-share-button" id="shareButton" aria-label="Share this page">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49M15.41 6.51 8.59 10.49"/></svg>

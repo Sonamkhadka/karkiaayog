@@ -106,16 +106,11 @@
   if (shareButton) {
     shareButton.addEventListener('click', async () => {
       const url = window.location.href;
-      const shareText = currentLang === 'ne'
-        ? 'कार्की आयोग प्रतिवेदनको यो सारांश हेर्नुहोस्।'
-        : 'Check out this summary of the Karki Aayog report.';
 
       try {
         if (navigator.share) {
           await navigator.share({
-            title: document.title,
-            text: shareText,
-            url,
+            url: url
           });
           setShareStatus('Page shared.', 'पृष्ठ साझा गरियो।');
           return;
@@ -740,5 +735,25 @@
       }
     });
   }, { passive: true });
+
+  // ---- GitHub Star Builder ----
+  const starContainers = [
+    document.getElementById('githubStarCount'),
+    document.getElementById('navGithubStars')
+  ];
+  
+  fetch('https://api.github.com/repos/Sonamkhadka/karkiaayog')
+    .then(response => response.json())
+    .then(data => {
+      if (data.stargazers_count !== undefined) {
+        starContainers.forEach(container => {
+          if (container) {
+            container.querySelector('.count-number').textContent = data.stargazers_count;
+            container.style.display = 'flex';
+          }
+        });
+      }
+    })
+    .catch(error => console.error('Error fetching github stars:', error));
 
 })();
