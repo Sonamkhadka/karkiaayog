@@ -143,7 +143,7 @@
     mobileBtn.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
-    nav.querySelectorAll('.nav-link').forEach(link => {
+    nav.querySelectorAll('a.nav-link').forEach(link => {
       link.addEventListener('click', () => nav.classList.remove('open'));
     });
   }
