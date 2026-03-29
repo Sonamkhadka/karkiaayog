@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karki Aayog Report | Nepal Gen-Z Protest Report Summary</title>
+  <meta name="description" content="Read an interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z protests. Explore the timeline, casualties, accountability findings, and recommendations in plain language.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f1114">
+  <link rel="canonical" href="https://karki-aayog-report.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karki Aayog Report">
+  <meta property="og:title" content="Karki Aayog Report | Nepal Gen-Z Protest Report Summary">
+  <meta property="og:description" content="Interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z protests, including timeline, casualties, accountability, and recommendations.">
+  <meta property="og:url" content="https://karki-aayog-report.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karki Aayog Report | Nepal Gen-Z Protest Report Summary">
+  <meta name="twitter:description" content="Interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z protests, including timeline, casualties, accountability, and recommendations.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@300..700&family=Noto+Sans+Devanagari:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Report",
+      "name": "Karki Aayog Report",
+      "headline": "Karki Aayog Report: Interactive summary of Nepal's September 2025 Gen-Z protest commission report",
+      "description": "Interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z protests, including timeline, casualties, accountability findings, and recommendations.",
+      "url": "https://karki-aayog-report.netlify.app/",
+      "inLanguage": ["en", "ne"],
+      "genre": ["Public report summary", "Interactive explainer"],
+      "keywords": [
+        "Karki Aayog report",
+        "Karki Aayog",
+        "Nepal Gen-Z protests",
+        "Nepal protest report",
+        "Gauri Bahadur Karki Commission"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Karki Aayog"
+        },
+        {
+          "@type": "Thing",
+          "name": "Nepal Gen-Z protests"
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Karki Aayog report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Karki Aayog report is the judicial inquiry commission report on Nepal's September 2025 Gen-Z protests. This website summarises the report's key findings, timeline, casualties, accountability recommendations, and political aftermath in plain language."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does this site exist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This site exists to make a 900-plus page public report easier to understand for students, researchers, journalists, and citizens who need a fast, readable summary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the full official report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is an interactive public summary of the report and related reporting, not a substitute for the full official document and source material."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can people contribute to this project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The repository is prepared for public contributions so people can suggest corrections, improve sourcing, refine the presentation, and add new explanatory material."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="Karki Aayog Report Logo">
+          <rect x="2" y="2" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 22V10h2v5l4-5h3l-5 5.5L17.5 22H15l-4-5.5-1 1V22H8z" fill="currentColor"/>
+          <circle cx="22" cy="10" r="2" fill="var(--color-accent)"/>
+          <path d="M22 14v8" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Karki Aayog</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#overview" class="nav-link" data-en="Overview" data-ne="सारांश">Overview</a>
+        <a href="#timeline" class="nav-link" data-en="Timeline" data-ne="समयरेखा">Timeline</a>
+        <a href="#casualties" class="nav-link" data-en="Casualties" data-ne="हताहत">Casualties</a>
+        <a href="#force" class="nav-link" data-en="Use of Force" data-ne="बल प्रयोग">Use of Force</a>
+        <a href="#accountability" class="nav-link" data-en="Accountability" data-ne="जवाफदेहिता">Accountability</a>
+        <a href="#martyrs" class="nav-link" data-en="Martyrs" data-ne="शहीदहरू">Martyrs</a>
+        <a href="#aftermath" class="nav-link" data-en="What Happened Since" data-ne="त्यसपछि">What Happened Since</a>
+        <a href="#faq" class="nav-link" data-en="FAQ" data-ne="प्रश्नोत्तर">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Switch to Nepali">
+          <span class="lang-label">ने</span>
+        </button>
+        <button data-theme-toggle aria-label="Switch to light mode" class="theme-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Background Image -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-image">
+        <img src="./assets/hero-protest.jpg" alt="Nepal Gen-Z protesters at the Federal Parliament, Kathmandu, September 2025" loading="eager">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-label" data-en="Judicial Inquiry Commission Report" data-ne="न्यायिक जाँच आयोग प्रतिवेदन">Judicial Inquiry Commission Report</p>
+        <h1 class="hero-title" data-en="Karki Aayog Report" data-ne="कार्की आयोग प्रतिवेदन">Karki Aayog Report</h1>
+        <p class="hero-subtitle" data-en="An interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z uprising, so every citizen can quickly understand what happened, who is responsible, and what must change." data-ne="नेपालको सेप्टेम्बर २०२५ को जेन-जी विद्रोहबारे कार्की आयोग प्रतिवेदनको अन्तरक्रियात्मक सारांश, ताकि हरेक नागरिकले के भयो, कसले जिम्मेवारी लिनुपर्छ, र के परिवर्तन हुनुपर्छ भनेर छिट्टै बुझ्न सकून।">An interactive summary of the Karki Aayog report on Nepal's September 2025 Gen-Z uprising, so every citizen can quickly understand what happened, who is responsible, and what must change.</p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-value">76</span>
+            <span class="meta-label" data-en="Lives Lost" data-ne="ज्यान गुमाए">Lives Lost</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-value">2,113+</span>
+            <span class="meta-label" data-en="Injured" data-ne="घाइते">Injured</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-value">45</span>
+            <span class="meta-label" data-en="Declared Martyrs" data-ne="शहीद घोषित">Declared Martyrs</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-value">8 Mar 2026</span>
+            <span class="meta-label" data-en="Report Submitted" data-ne="प्रतिवेदन बुझाइयो">Report Submitted</span>
+          </div>
+        </div>
+        <div class="hero-actions-row">
+          <a href="#overview" class="hero-cta">
+            <span data-en="Read the Summary" data-ne="सारांश पढ्नुहोस्">Read the Summary</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <button type="button" class="hero-share-button" id="shareButton" aria-label="Share this page">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49M15.41 6.51 8.59 10.49"/></svg>
+            <span data-en="Share This Page" data-ne="यो पृष्ठ साझा गर्नुहोस्">Share This Page</span>
+          </button>
+        </div>
+        <p class="hero-share-status" id="shareStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2 class="section-title" data-en="What is the Karki Aayog?" data-ne="कार्की आयोग के हो?">What is the Karki Aayog?</h2>
+        </div>
+        <div class="overview-grid">
+          <div class="overview-text">
+            <p data-en="On 21 September 2025, the interim government of Nepal formed a three-member judicial inquiry commission chaired by former Supreme Court justice <strong>Gauri Bahadur Karki</strong> to investigate the deadly violence on 8 and 9 September 2025." data-ne="२०२५ सेप्टेम्बर २१ मा, नेपालको अन्तरिम सरकारले पूर्व सर्वोच्च अदालतका न्यायाधीश <strong>गौरी बहादुर कार्की</strong>को अध्यक्षतामा तीन सदस्यीय न्यायिक जाँच आयोग गठन गर्यो।">On 21 September 2025, the interim government of Nepal formed a three-member judicial inquiry commission chaired by former Supreme Court justice <strong>Gauri Bahadur Karki</strong> to investigate the deadly violence on 8 and 9 September 2025.</p>
+            <p data-en="The commission's mandate was to examine the state's use of lethal force against protesters on Day 1, and the widespread arson, vandalism, and looting on Day 2. After multiple deadline extensions, the commission submitted its <strong>900+ page report with 8,000 pages of supplementary evidence</strong> to Prime Minister Sushila Karki on 8 March 2026." data-ne="आयोगको जिम्मेवारी पहिलो दिन प्रदर्शनकारीहरूविरुद्ध राज्यको घातक बल प्रयोग र दोस्रो दिन व्यापक आगजनी, तोडफोड र लुटपाटको जाँच गर्नु थियो। धेरै पटक म्याद थप गरेपछि, आयोगले <strong>९०० भन्दा बढी पृष्ठको प्रतिवेदन र ८,००० पृष्ठको पूरक प्रमाणसहित</strong> ८ मार्च २०२६ मा प्रधानमन्त्री सुशीला कार्कीलाई बुझायो।">The commission's mandate was to examine the state's use of lethal force against protesters on Day 1, and the widespread arson, vandalism, and looting on Day 2. After multiple deadline extensions, the commission submitted its <strong>900+ page report with 8,000 pages of supplementary evidence</strong> to Prime Minister Sushila Karki on 8 March 2026.</p>
+            <p data-en="The report recommends criminal investigation against former PM KP Sharma Oli, former Home Minister Ramesh Lekhak, and former IGP Chandra Kuber Khapung, along with departmental action against dozens of security officials for their roles in the violence." data-ne="प्रतिवेदनले पूर्वप्रधानमन्त्री केपी शर्मा ओली, पूर्वगृहमन्त्री रमेश लेखक र पूर्व आइजीपी चन्द्र कुबेर खपुङविरुद्ध आपराधिक अनुसन्धान र दर्जनौं सुरक्षा अधिकारीहरूविरुद्ध विभागीय कारबाहीको सिफारिस गरेको छ।">The report recommends criminal investigation against former PM KP Sharma Oli, former Home Minister Ramesh Lekhak, and former IGP Chandra Kuber Khapung, along with departmental action against dozens of security officials for their roles in the violence.</p>
+          </div>
+          <div class="overview-cards">
+            <div class="info-card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3 data-en="Commission Chair" data-ne="आयोग अध्यक्ष">Commission Chair</h3>
+              <p data-en="Former Justice Gauri Bahadur Karki (not related to interim PM Sushila Karki)" data-ne="पूर्व न्यायाधीश गौरी बहादुर कार्की (अन्तरिम प्रधानमन्त्री सुशीला कार्कीसँग सम्बन्धित छैनन्)">Former Justice Gauri Bahadur Karki (not related to interim PM Sushila Karki)</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <h3 data-en="Commission Members" data-ne="आयोग सदस्यहरू">Commission Members</h3>
+              <p data-en="Bigyanraj Sharma (spokesperson) and Bishweshwar Bhandari" data-ne="विज्ञानराज शर्मा (प्रवक्ता) र विश्वेश्वर भण्डारी">Bigyanraj Sharma (spokesperson) and Bishweshwar Bhandari</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <h3 data-en="Formed" data-ne="गठन मिति">Formed</h3>
+              <p data-en="21 September 2025, submitted 8 March 2026 (extended multiple times)" data-ne="२१ सेप्टेम्बर २०२५, ८ मार्च २०२६ मा बुझाइयो (धेरै पटक म्याद थपियो)">21 September 2025, submitted 8 March 2026 (extended multiple times)</p>
+            </div>
+            <div class="info-card highlight-card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 data-en="Implementation" data-ne="कार्यान्वयन">Implementation</h3>
+              <p data-en="PM Balendra Shah's first cabinet meeting (27 March 2026) decided to implement the report immediately" data-ne="प्रधानमन्त्री बलेन्द्र शाहको पहिलो मन्त्रिपरिषद् बैठक (२७ मार्च २०२६) ले प्रतिवेदन तत्काल कार्यान्वयन गर्ने निर्णय गर्यो">PM Balendra Shah's first cabinet meeting (27 March 2026) decided to implement the report immediately</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break: Protest Scene -->
+    <div class="photo-break">
+      <img src="./assets/hero-protest-2.jpg" alt="Gen Z protesters march through Kathmandu, September 2025" loading="lazy">
+      <div class="photo-caption">Gen-Z protesters march through the streets of Kathmandu, September 2025. Photo: Getty Images / The Atlantic</div>
+    </div>
+
+    <!-- What Triggered the Protests -->
+    <section class="section section-dark" id="trigger">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2 class="section-title" data-en="What Triggered the Protests?" data-ne="विरोध प्रदर्शनको कारण के थियो?">What Triggered the Protests?</h2>
+        </div>
+        <div class="trigger-grid">
+          <div class="trigger-card">
+            <div class="trigger-icon social-media-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </div>
+            <h3 data-en="Social Media Ban" data-ne="सामाजिक सञ्जाल प्रतिबन्ध">Social Media Ban</h3>
+            <p data-en="On 4 September 2025, the government banned <strong>26 social media platforms</strong> including Facebook, YouTube, WhatsApp, and X, citing registration non-compliance. The ban was widely viewed as an attempt to silence the #NepoKids trend exposing politicians' corrupt lifestyles." data-ne="४ सेप्टेम्बर २०२५ मा, सरकारले दर्ता अनुपालनको बहानामा Facebook, YouTube, WhatsApp, र X सहित <strong>२६ सामाजिक सञ्जाल प्लेटफर्महरू</strong> प्रतिबन्ध गर्यो। यसलाई राजनीतिज्ञहरूको भ्रष्ट जीवनशैली उजागर गर्ने #NepoKids ट्रेन्डलाई चुप लगाउने प्रयासको रूपमा हेरिएको थियो।">On 4 September 2025, the government banned <strong>26 social media platforms</strong> including Facebook, YouTube, WhatsApp, and X, citing registration non-compliance. The ban was widely viewed as an attempt to silence the #NepoKids trend exposing politicians' corrupt lifestyles.</p>
+          </div>
+          <div class="trigger-card">
+            <div class="trigger-icon corruption-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3 data-en="Endemic Corruption" data-ne="व्यापक भ्रष्टाचार">Endemic Corruption</h3>
+            <p data-en="Deep frustration over government corruption, nepotism, economic stagnation, and youth unemployment. In a country where the median age is just 25, young people had no faith in the political establishment." data-ne="सरकारी भ्रष्टाचार, कुलवाद, आर्थिक अवरोध र युवा बेरोजगारीप्रतिको गहिरो निराशा। मझौला उमेर मात्र २५ वर्ष भएको देशमा, युवाहरूको राजनीतिक प्रतिष्ठानमा कुनै विश्वास थिएन।">Deep frustration over government corruption, nepotism, economic stagnation, and youth unemployment. In a country where the median age is just 25, young people had no faith in the political establishment.</p>
+          </div>
+          <div class="trigger-card">
+            <div class="trigger-icon youth-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 data-en="Leaderless Organisation" data-ne="नेतृत्वविहीन संगठन">Leaderless Organisation</h3>
+            <p data-en='Coordinated via Discord servers (145,000+ members), VPNs, and QR codes despite the ban. The "Hami Nepal" NGO facilitated coordination. The movement was entirely youth-led with no formal party affiliation.' data-ne='प्रतिबन्धको बाबजुद Discord सर्भर (१४५,०००+ सदस्य), VPN, र QR कोडहरू मार्फत समन्वय गरियो। "हामी नेपाल" NGO ले समन्वयमा सहयोग गर्यो। आन्दोलन पूर्णतया युवा-नेतृत्वमा थियो र कुनै पार्टी सम्बद्धता थिएन।'>Coordinated via Discord servers (145,000+ members), VPNs, and QR codes despite the ban. The "Hami Nepal" NGO facilitated coordination. The movement was entirely youth-led with no formal party affiliation.</p>
+          </div>
+        </div>
+        <div class="commission-quote">
+          <blockquote data-en='"This event occurred due to misgovernance. Regulatory bodies have been distorted. Delays in the judiciary and executive, along with partisan appointments even at constitutional levels, have increased public anger."' data-ne='"यो घटना कुशासनका कारण भयो। नियामक निकायहरू विकृत भएका छन्। न्यायपालिका र कार्यपालिकामा ढिलाइ, संवैधानिक तहमा पनि पक्षपातपूर्ण नियुक्ति, सबैले जनताको रिस बढाएको छ।"'>
+            "This event occurred due to misgovernance. Regulatory bodies have been distorted. Delays in the judiciary and executive, along with partisan appointments even at constitutional levels, have increased public anger."
+          </blockquote>
+          <cite data-en="Justice Gauri Bahadur Karki, Commission Chair, upon submitting the report" data-ne="न्यायाधीश गौरी बहादुर कार्की, आयोग अध्यक्ष, प्रतिवेदन बुझाउँदै">Justice Gauri Bahadur Karki, Commission Chair, upon submitting the report</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break: Protest Close-up -->
+    <div class="photo-break">
+      <img src="./assets/protest-ap.jpg" alt="Young protesters raise their voices against corruption in Nepal" loading="lazy">
+      <div class="photo-caption">Young Nepalis demand an end to corruption and political nepotism. Photo: AP News</div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2 class="section-title" data-en="Timeline of Events" data-ne="घटनाक्रमको समयरेखा">Timeline of Events</h2>
+        </div>
+        <p class="section-intro" data-en="The two deadliest days in Nepal's modern democratic history unfolded in rapid succession. Here is what happened, hour by hour." data-ne="नेपालको आधुनिक प्रजातान्त्रिक इतिहासका दुई सबैभन्दा घातक दिनहरू एकपछि अर्को आए। यहाँ घण्टा-घण्टा के भयो।">The two deadliest days in Nepal's modern democratic history unfolded in rapid succession. Here is what happened, hour by hour.</p>
+
+        <div class="day-tabs">
+          <button class="day-tab active" data-day="1" data-en="Bhadra 23 (8 September) - Day 1" data-ne="भदौ २३ (८ सेप्टेम्बर) - दिन १">Bhadra 23 (8 September) - Day 1</button>
+          <button class="day-tab" data-day="2" data-en="Bhadra 24 (9 September) - Day 2" data-ne="भदौ २४ (९ सेप्टेम्बर) - दिन २">Bhadra 24 (9 September) - Day 2</button>
+        </div>
+
+        <div class="timeline-container" id="timeline-day-1">
+          <div class="timeline-day-label">
+            <span class="day-badge day-1-badge">Day 1</span>
+            <span data-en="8 September 2025 - The Crackdown" data-ne="८ सेप्टेम्बर २०२५ - दमन">8 September 2025 - The Crackdown</span>
+          </div>
+          <div class="timeline-track">
+            <div class="tl-item"><div class="tl-time">9:00 AM</div><div class="tl-content"><div class="tl-tag peaceful">Peaceful</div><h4 data-en="Protests Begin at Maitighar Mandala" data-ne="मैतीघर मण्डलमा प्रदर्शन सुरु">Protests Begin at Maitighar Mandala</h4><p data-en="Thousands of young people, many in school uniforms, gathered at the historic Maitighar Mandala in Kathmandu for a peaceful demonstration against the social media ban and corruption." data-ne="हजारौं युवाहरू, धेरैजसो स्कुल युनिफर्ममा, काठमाडौँको ऐतिहासिक मैतीघर मण्डलमा सामाजिक सञ्जाल प्रतिबन्ध र भ्रष्टाचारविरुद्ध शान्तिपूर्ण प्रदर्शनका लागि भेला भए।">Thousands of young people, many in school uniforms, gathered at the historic Maitighar Mandala in Kathmandu for a peaceful demonstration against the social media ban and corruption.</p></div></div>
+            <div class="tl-item"><div class="tl-time">11:38 AM</div><div class="tl-content"><div class="tl-tag escalation">Escalation</div><h4 data-en="Barricades Breached Near Parliament" data-ne="संसद नजिक ब्यारिकेड तोडियो">Barricades Breached Near Parliament</h4><p data-en="Crowds grew and demonstrators breached the first police barricades near the Federal Parliament in New Baneshwor. Some climbed parliament walls." data-ne="भीड बढ्यो र प्रदर्शनकारीहरूले नयाँ बानेश्वरको सङ्घीय संसद नजिक पहिलो प्रहरी ब्यारिकेड तोडे। केहीले संसदको पर्खाल चढे।">Crowds grew and demonstrators breached the first police barricades near the Federal Parliament in New Baneshwor. Some climbed parliament walls.</p></div></div>
+            <div class="tl-item"><div class="tl-time">11:55 AM</div><div class="tl-content"><div class="tl-tag force">Force Used</div><h4 data-en="Tear Gas Deployed" data-ne="अश्रुग्यास प्रयोग">Tear Gas Deployed</h4><p data-en="Security forces deployed tear gas to disperse protesters near the parliament building." data-ne="सुरक्षा बलले संसद भवन नजिक प्रदर्शनकारीहरूलाई तितर-बितर पार्न अश्रुग्यास प्रयोग गर्यो।">Security forces deployed tear gas to disperse protesters near the parliament building.</p></div></div>
+            <div class="tl-item"><div class="tl-time">12:08 PM</div><div class="tl-content"><div class="tl-tag escalation">Escalation</div><h4 data-en="Protesters Climb Parliament Gate" data-ne="प्रदर्शनकारीहरू संसद गेटमा चढे">Protesters Climb Parliament Gate</h4><p data-en="Around 20 individuals climbed the main gate of the Federal Parliament." data-ne="करिब २० जनाले सङ्घीय संसदको मुख्य गेटमा चढे।">Around 20 individuals climbed the main gate of the Federal Parliament.</p></div></div>
+            <div class="tl-item"><div class="tl-time">12:30 PM</div><div class="tl-content"><div class="tl-tag force">Curfew</div><h4 data-en="Curfew Imposed in New Baneshwor" data-ne="नयाँ बानेश्वरमा कर्फ्यू लगाइयो">Curfew Imposed in New Baneshwor</h4><p data-en="The Kathmandu District Administration Office imposed a curfew in New Baneshwor and surrounding areas. Much of the crowd could not hear the announcement." data-ne="काठमाडौँ जिल्ला प्रशासन कार्यालयले नयाँ बानेश्वर र वरपरका क्षेत्रमा कर्फ्यू लगायो। धेरैजसो भीडले घोषणा सुन्न सकेनन्।">The Kathmandu District Administration Office imposed a curfew in New Baneshwor and surrounding areas. Much of the crowd could not hear the announcement.</p></div></div>
+            <div class="tl-item"><div class="tl-time">12:37 PM</div><div class="tl-content"><div class="tl-tag lethal">Lethal Force</div><h4 data-en="Police Open Fire For the First Time" data-ne="प्रहरीले पहिलो पटक गोली चलायो">Police Open Fire For the First Time</h4><p data-en="Police opened live fire targeting protesters near the Parliament gate. This was the first use of lethal ammunition. <strong>Gunshots continued for more than four hours without any attempt to stop the firing</strong>, according to the Karki Commission." data-ne="प्रहरीले संसद गेट नजिक प्रदर्शनकारीहरूलाई लक्षित गरी गोली चलायो। यो घातक गोलाबारुदको पहिलो प्रयोग थियो। कार्की आयोगका अनुसार <strong>गोली चार घण्टाभन्दा बढी समय रोक्ने कुनै प्रयास नगरी चल्यो</strong>।">Police opened live fire targeting protesters near the Parliament gate. This was the first use of lethal ammunition. <strong>Gunshots continued for more than four hours without any attempt to stop the firing</strong>, according to the Karki Commission.</p></div></div>
+            <div class="tl-item"><div class="tl-time">1:20 PM</div><div class="tl-content"><div class="tl-tag lethal">Lethal Force</div><h4 data-en="Journalist Shot" data-ne="पत्रकारमाथि गोली">Journalist Shot</h4><p data-en="A Naya Patrika journalist was shot while reporting from near the Parliament compound." data-ne="नयाँ पत्रिकाका पत्रकारमाथि संसद परिसर नजिकबाट रिपोर्टिङ गर्दा गोली लाग्यो।">A Naya Patrika journalist was shot while reporting from near the Parliament compound.</p></div></div>
+            <div class="tl-item"><div class="tl-time">3:00 PM</div><div class="tl-content"><div class="tl-tag lethal">Hospital Attacked</div><h4 data-en="Tear Gas Fired Inside Hospital" data-ne="अस्पताल भित्र अश्रुग्यास प्रहार">Tear Gas Fired Inside Hospital</h4><p data-en="Police entered Civil Service Hospital premises and fired tear gas inside the compound where wounded protesters were being treated. 14 fatalities confirmed by this time." data-ne="प्रहरीले निजामती सेवा अस्पताल परिसरमा प्रवेश गरी घाइते प्रदर्शनकारीहरूको उपचार भइरहेको ठाउँमा अश्रुग्यास प्रहार गर्यो। यस समयसम्म १४ जनाको मृत्यु पुष्टि भएको थियो।">Police entered Civil Service Hospital premises and fired tear gas inside the compound where wounded protesters were being treated. 14 fatalities confirmed by this time.</p></div></div>
+            <div class="tl-item"><div class="tl-time">5:00 PM</div><div class="tl-content"><div class="tl-tag death">19 Dead</div><h4 data-en="19 Protesters Killed" data-ne="१९ प्रदर्शनकारी मारिए">19 Protesters Killed</h4><p data-en="By early evening, officials reported 19 protesters killed (17 in Kathmandu, 2 in Itahari) and more than 100 injured. Forensic reports confirmed nearly all victims were shot above the waist: head, neck, and chest." data-ne="साँझसम्ममा, अधिकारीहरूले १९ प्रदर्शनकारी मारिएको (१७ काठमाडौँमा, २ इटहरीमा) र १०० भन्दा बढी घाइते भएको जानकारी दिए। फोरेन्सिक रिपोर्टले प्रायः सबै पीडितहरूलाई कम्मरमाथि: टाउको, घाँटी र छातीमा गोली लागेको पुष्टि गर्यो।">By early evening, officials reported 19 protesters killed (17 in Kathmandu, 2 in Itahari) and more than 100 injured. Forensic reports confirmed nearly all victims were shot above the waist: head, neck, and chest.</p></div></div>
+            <div class="tl-item"><div class="tl-time">6:00 PM</div><div class="tl-content"><div class="tl-tag political">Political</div><h4 data-en="Emergency Cabinet Meeting" data-ne="आकस्मिक मन्त्रिपरिषद् बैठक">Emergency Cabinet Meeting</h4><p data-en="PM Oli convened an emergency cabinet meeting. Home Minister Ramesh Lekhak resigned at 8:00 PM. Social media ban lifted at 11:25 PM." data-ne="प्रधानमन्त्री ओलीले आकस्मिक मन्त्रिपरिषद् बैठक बोलाए। गृहमन्त्री रमेश लेखकले राति ८:०० मा राजीनामा दिए। सामाजिक सञ्जाल प्रतिबन्ध राति ११:२५ मा हटाइयो।">PM Oli convened an emergency cabinet meeting. Home Minister Ramesh Lekhak resigned at 8:00 PM. Social media ban lifted at 11:25 PM.</p></div></div>
+          </div>
+        </div>
+
+        <div class="timeline-container hidden" id="timeline-day-2">
+          <div class="timeline-day-label">
+            <span class="day-badge day-2-badge">Day 2</span>
+            <span data-en="9 September 2025 - The Uprising" data-ne="९ सेप्टेम्बर २०२५ - विद्रोह">9 September 2025 - The Uprising</span>
+          </div>
+          <div class="timeline-track">
+            <div class="tl-item"><div class="tl-time">10:07 AM</div><div class="tl-content"><div class="tl-tag political">Resignations</div><h4 data-en="Ministers Begin Resigning" data-ne="मन्त्रीहरूले राजीनामा दिन थाले">Ministers Begin Resigning</h4><p data-en="Agriculture Minister Ramnath Adhikari resigned, followed by Health Minister Pradeep Poudel at 10:45 AM. The government began collapsing." data-ne="कृषिमन्त्री रामनाथ अधिकारीले राजीनामा दिए, त्यसपछि स्वास्थ्य मन्त्री प्रदीप पौडेलले १०:४५ मा। सरकार भत्कन थाल्यो।">Agriculture Minister Ramnath Adhikari resigned, followed by Health Minister Pradeep Poudel at 10:45 AM. The government began collapsing.</p></div></div>
+            <div class="tl-item"><div class="tl-time">11:42 AM</div><div class="tl-content"><div class="tl-tag destruction">Arson</div><h4 data-en="Politicians' Residences Set Ablaze" data-ne="राजनीतिज्ञहरूका घरमा आगो">Politicians' Residences Set Ablaze</h4><p data-en="Enraged by the previous day's killings, mobs set fire to Sher Bahadur Deuba's residence (cash found inside), followed by KP Oli's private residence in Balkot (12:54 PM) and Gagan Thapa's home (1:00 PM)." data-ne="अघिल्लो दिनको हत्याबाट आक्रोशित भीडले शेरबहादुर देउवाको निवासमा आगो लगायो (भित्र नगद भेटियो), त्यसपछि बाल्कोटमा केपी ओलीको निजी निवास (१२:५४) र गगन थापाको घर (१:०० बजे)।">Enraged by the previous day's killings, mobs set fire to Sher Bahadur Deuba's residence (cash found inside), followed by KP Oli's private residence in Balkot (12:54 PM) and Gagan Thapa's home (1:00 PM).</p></div></div>
+            <div class="tl-item"><div class="tl-time">1:45 PM</div><div class="tl-content"><div class="tl-tag destruction">Arson</div><h4 data-en="Parliament Breached and Burned" data-ne="संसदमा आक्रमण र आगलागी">Parliament Breached and Burned</h4><p data-en="Crowds breached the Parliament complex. Within 30 minutes it was engulfed in flames. The Supreme Court was set ablaze by 2:50 PM. Singha Durbar (government secretariat) followed by 3:06 PM. All three branches of government were destroyed." data-ne="भीडले संसद परिसर तोड्यो। ३० मिनेटभित्र त्यसमा आगो लाग्यो। दिउँसो २:५० सम्म सर्वोच्च अदालतमा आगो लगाइयो। ३:०६ सम्म सिंहदरबार (सरकारी सचिवालय) पनि। सरकारका तीनवटै अङ्गहरू ध्वस्त भए।">Crowds breached the Parliament complex. Within 30 minutes it was engulfed in flames. The Supreme Court was set ablaze by 2:50 PM. Singha Durbar (government secretariat) followed by 3:06 PM. All three branches of government were destroyed.</p></div></div>
+            <div class="tl-item"><div class="tl-time">2:00 PM</div><div class="tl-content"><div class="tl-tag political">PM Resigns</div><h4 data-en="PM KP Sharma Oli Resigns" data-ne="प्रधानमन्त्री केपी शर्मा ओलीले राजीनामा दिए">PM KP Sharma Oli Resigns</h4><p data-en="Prime Minister Oli resigned and reportedly fled to army barracks by helicopter. All 21 RSP MPs and all Rastriya Prajatantra Party MPs also resigned from parliament." data-ne="प्रधानमन्त्री ओलीले राजीनामा दिए र हेलिकप्टरबाट सेनाको ब्यारेकमा भागेको बताइएको छ। सबै २१ राष्ट्रिय स्वतन्त्र पार्टी र सबै राष्ट्रिय प्रजातन्त्र पार्टीका सांसदहरूले पनि संसदबाट राजीनामा दिए।">Prime Minister Oli resigned and reportedly fled to army barracks by helicopter. All 21 RSP MPs and all Rastriya Prajatantra Party MPs also resigned from parliament.</p></div></div>
+            <div class="tl-item"><div class="tl-time">Afternoon</div><div class="tl-content"><div class="tl-tag destruction">Nationwide</div><h4 data-en="Arson Spreads Nationwide" data-ne="आगजनी देशभर फैलियो">Arson Spreads Nationwide</h4><p data-en="Hundreds of government buildings, police stations, party offices, courts, and private businesses set on fire across the country. Criminal elements and TOB group members infiltrated protests, triggering further violence. 1,342 weapons and ~100,000 rounds of ammunition looted from police stations." data-ne="सयौं सरकारी भवन, प्रहरी कार्यालय, पार्टी कार्यालय, अदालत र निजी व्यवसायहरूमा देशभर आगो लगाइयो। आपराधिक तत्व र TOB समूहका सदस्यहरूले प्रदर्शनमा घुसपैठ गरे। प्रहरी कार्यालयहरूबाट १,३४२ हतियार र ~१,००,००० गोलाबारुद लुटियो।">Hundreds of government buildings, police stations, party offices, courts, and private businesses set on fire across the country. Criminal elements and TOB group members infiltrated protests, triggering further violence. 1,342 weapons and ~100,000 rounds of ammunition looted from police stations.</p></div></div>
+            <div class="tl-item"><div class="tl-time">5:30 PM</div><div class="tl-content"><div class="tl-tag death">Police Officers Killed</div><h4 data-en="3 Police Officers Killed in Koteshwor" data-ne="कोटेश्वरमा ३ प्रहरी अधिकारी मारिए">3 Police Officers Killed in Koteshwor</h4><p data-en="Three police officers were brutally killed by mobs in Koteshwor, Kathmandu. Multiple Bhatbhateni supermarket outlets were looted and set on fire, killing 20 people trapped inside." data-ne="कोटेश्वर, काठमाडौँमा भीडले तीन प्रहरी अधिकारीलाई निर्ममतापूर्वक मारे। भटभटेनी सुपरमार्केटका धेरै शाखाहरू लुटिए र आगो लगाइयो, जसमा भित्र फसेका २० जनाको मृत्यु भयो।">Three police officers were brutally killed by mobs in Koteshwor, Kathmandu. Multiple Bhatbhateni supermarket outlets were looted and set on fire, killing 20 people trapped inside.</p></div></div>
+            <div class="tl-item"><div class="tl-time">Evening</div><div class="tl-content"><div class="tl-tag destruction">Prison Breaks</div><h4 data-en="Mass Prison Breaks Across 28 Facilities" data-ne="२८ कारागारबाट सामूहिक भागाभाग">Mass Prison Breaks Across 28 Facilities</h4><p data-en="Over 14,000 inmates fled from 28 prison facilities. 3,000+ inmates broke out of Central Jail Sundhara alone. 10 prisoners were shot dead while escaping. More than 5,000 remain at large." data-ne="२८ कारागार सुविधाहरूबाट १४,००० भन्दा बढी कैदीहरू भागे। केन्द्रीय कारागार सुन्धाराबाट मात्र ३,००० भन्दा बढी कैदी भागे। भाग्ने क्रममा १० कैदी गोली लागेर मरे। ५,००० भन्दा बढी अझै फरार छन्।">Over 14,000 inmates fled from 28 prison facilities. 3,000+ inmates broke out of Central Jail Sundhara alone. 10 prisoners were shot dead while escaping. More than 5,000 remain at large.</p></div></div>
+            <div class="tl-item"><div class="tl-time">10:00 PM</div><div class="tl-content"><div class="tl-tag force">Army Deployed</div><h4 data-en="Nepal Army Takes Control" data-ne="नेपाली सेनाले नियन्त्रण लियो">Nepal Army Takes Control</h4><p data-en="The Nepali Army assumed responsibility for law and order. Army Chief Ashok Raj Sigdel appealed for calm. The military became the last stable institution capable of restoring order." data-ne="नेपाली सेनाले कानुन र व्यवस्थाको जिम्मेवारी लियो। सेना प्रमुख अशोक राज सिग्देलले शान्तिको अपील गरे। सेना व्यवस्था पुनर्स्थापनामा सक्षम अन्तिम स्थिर संस्था भयो।">The Nepali Army assumed responsibility for law and order. Army Chief Ashok Raj Sigdel appealed for calm. The military became the last stable institution capable of restoring order.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break: Parliament Fire -->
+    <div class="photo-break photo-break-wide">
+      <img src="./assets/parliament-fire.jpg" alt="Nepal's Federal Parliament building engulfed in flames on 9 September 2025" loading="lazy">
+      <div class="photo-caption">Nepal's Federal Parliament engulfed in flames on Day 2, 9 September 2025. All three branches of government were destroyed. Photo: Al Jazeera</div>
+    </div>
+
+    <!-- Casualties Section -->
+    <section class="section section-dark" id="casualties">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2 class="section-title" data-en="Casualties and Human Cost" data-ne="हताहत र मानवीय लागत">Casualties and Human Cost</h2>
+        </div>
+        <p class="section-intro" data-en="The Karki Commission documented 76 deaths over two days. Here is the breakdown of who lost their lives." data-ne="कार्की आयोगले दुई दिनमा ७६ मृत्यु दस्तावेज गर्यो। यहाँ जीवन गुमाउनेहरूको विवरण छ।">The Karki Commission documented 76 deaths over two days. Here is the breakdown of who lost their lives.</p>
+
+        <div class="kpi-row">
+          <div class="kpi-card kpi-deaths"><span class="kpi-value" data-count="76">0</span><span class="kpi-label" data-en="Total Deaths" data-ne="कुल मृत्यु">Total Deaths</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="2113">0</span><span class="kpi-label" data-en="People Injured" data-ne="घाइते">People Injured</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="48">0</span><span class="kpi-label" data-en="Killed by Gunfire" data-ne="गोलीले मारिएका">Killed by Gunfire</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="14043">0</span><span class="kpi-label" data-en="Inmates Escaped" data-ne="भागेका कैदी">Inmates Escaped</span></div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h3 class="chart-title" data-en="Deaths by Category" data-ne="श्रेणीअनुसार मृत्यु">Deaths by Category</h3>
+            <p class="chart-desc" data-en="Breakdown of the 76 fatalities by victim category, as documented in the Nepal Army's official report." data-ne="नेपाली सेनाको आधिकारिक प्रतिवेदनमा दस्तावेज गरिएअनुसार ७६ मृत्युको पीडित श्रेणीअनुसार विवरण।">Breakdown of the 76 fatalities by victim category, as documented in the Nepal Army's official report.</p>
+            <div class="chart-wrap"><canvas id="deathsBreakdownChart"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title" data-en="Deaths by Day" data-ne="दिनअनुसार मृत्यु">Deaths by Day</h3>
+            <p class="chart-desc" data-en="Day 1 saw targeted lethal force against unarmed protesters. Day 2 saw retaliatory mob violence and arson-related deaths." data-ne="दिन १ मा निहत्था प्रदर्शनकारीविरुद्ध लक्षित घातक बल प्रयोग भयो। दिन २ मा प्रतिशोधात्मक भीड हिंसा र आगजनीसम्बन्धी मृत्यु भए।">Day 1 saw targeted lethal force against unarmed protesters. Day 2 saw retaliatory mob violence and arson-related deaths.</p>
+            <div class="chart-wrap"><canvas id="deathsByDayChart"></canvas></div>
+          </div>
+        </div>
+
+        <div class="forensic-finding">
+          <div class="forensic-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <div>
+            <h3 data-en="Forensic Finding" data-ne="फोरेन्सिक निष्कर्ष">Forensic Finding</h3>
+            <p data-en="Forensic reports from Tribhuvan University Teaching Hospital confirmed that <strong>nearly all gunshot victims were struck above the waist, primarily in the head, neck, and chest</strong>, violating all crowd control protocols. Post-mortem reports noted that high-velocity 7.62x51mm military-grade bullets caused most deaths. A 12-year-old student was among the confirmed dead." data-ne="त्रिभुवन विश्वविद्यालय शिक्षण अस्पतालका फोरेन्सिक प्रतिवेदनहरूले पुष्टि गरे कि <strong>प्रायः सबै गोली लागेका पीडितहरूलाई कम्मरमाथि, मुख्यतया टाउको, घाँटी र छातीमा लागेको थियो</strong>, जसले सबै भीड नियन्त्रण प्रोटोकल उल्लङ्घन गर्यो। पोस्ट-मोर्टम रिपोर्टले उच्च-वेगका ७.६२x५१मिमि सैन्य ग्रेडका गोलीहरूले धेरैजसो मृत्यु गराएको उल्लेख गर्यो। एक १२ वर्षीय विद्यार्थी पनि पुष्टि मृतमध्ये थिए।">Forensic reports from Tribhuvan University Teaching Hospital confirmed that <strong>nearly all gunshot victims were struck above the waist, primarily in the head, neck, and chest</strong>, violating all crowd control protocols. Post-mortem reports noted that high-velocity 7.62x51mm military-grade bullets caused most deaths. A 12-year-old student was among the confirmed dead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use of Force Section -->
+    <section class="section" id="force">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <h2 class="section-title" data-en="Use of Force Analysis" data-ne="बल प्रयोगको विश्लेषण">Use of Force Analysis</h2>
+        </div>
+        <p class="section-intro" data-en="Nepal Police records show 13,182 rounds were fired across the country over two days. The Karki Commission found no attempt was made to stop the firing despite it continuing for over four hours." data-ne="नेपाल प्रहरी अभिलेखले दुई दिनमा देशभर १३,१८२ राउन्ड गोली चलाइएको देखाउँछ। कार्की आयोगले चार घण्टाभन्दा बढी गोली चलिरहँदा पनि रोक्ने कुनै प्रयास नभएको पायो।">Nepal Police records show 13,182 rounds were fired across the country over two days. The Karki Commission found no attempt was made to stop the firing despite it continuing for over four hours.</p>
+
+        <div class="charts-grid">
+          <div class="chart-card chart-card-wide">
+            <h3 class="chart-title" data-en="Ammunition Fired by Type" data-ne="प्रकारअनुसार गोलाबारुद चलाइएको">Ammunition Fired by Type</h3>
+            <p class="chart-desc" data-en="Breakdown of 13,182 total rounds fired by Nepal Police over 8-9 September 2025." data-ne="८-९ सेप्टेम्बर २०२५ मा नेपाल प्रहरीले चलाएको कुल १३,१८२ राउन्डको विवरण।">Breakdown of 13,182 total rounds fired by Nepal Police over 8-9 September 2025.</p>
+            <div class="chart-wrap chart-wrap-bar"><canvas id="ammunitionChart"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title" data-en="Firing by Province" data-ne="प्रदेशअनुसार गोली">Firing by Province</h3>
+            <p class="chart-desc" data-en="The Kathmandu Valley witnessed the highest concentration of force, with 6,891 of the 13,182 total rounds fired." data-ne="काठमाडौँ उपत्यकामा सबैभन्दा बढी बल प्रयोग भयो, कुल १३,१८२ राउन्डमध्ये ६,८९१ राउन्ड।">The Kathmandu Valley witnessed the highest concentration of force, with 6,891 of the 13,182 total rounds fired.</p>
+            <div class="chart-wrap"><canvas id="firingByProvinceChart"></canvas></div>
+          </div>
+        </div>
+
+        <div class="force-details-grid">
+          <div class="force-card"><span class="force-number">2,642</span><span class="force-label" data-en="Live Bullets" data-ne="जीवित गोली">Live Bullets</span><p data-en="Including INSAS, SLR rifles, and service pistols. Most lethal force concentrated in Kathmandu Valley (1,329 live rounds)." data-ne="INSAS, SLR राइफल र सेवा पिस्तोल सहित। सबैभन्दा घातक बल काठमाडौँ उपत्यकामा केन्द्रित (१,३२९ जीवित राउन्ड)।">Including INSAS, SLR rifles, and service pistols. Most lethal force concentrated in Kathmandu Valley (1,329 live rounds).</p></div>
+          <div class="force-card"><span class="force-number">1,884</span><span class="force-label" data-en="Rubber Bullets" data-ne="रबर बुलेट">Rubber Bullets</span><p data-en="1,420 of 1,884 rubber rounds were fired in the Kathmandu Valley alone." data-ne="१,८८४ रबर राउन्डमध्ये १,४२० एक्लो काठमाडौँ उपत्यकामा चलाइयो।">1,420 of 1,884 rubber rounds were fired in the Kathmandu Valley alone.</p></div>
+          <div class="force-card"><span class="force-number">6,279</span><span class="force-label" data-en="Tear Gas Shells" data-ne="अश्रुग्यास शेल">Tear Gas Shells</span><p data-en="Including tear gas fired inside Civil Service Hospital where wounded protesters were being treated." data-ne="निजामती सेवा अस्पताल भित्र पनि अश्रुग्यास प्रहार गरिएको, जहाँ घाइते प्रदर्शनकारीको उपचार भइरहेको थियो।">Including tear gas fired inside Civil Service Hospital where wounded protesters were being treated.</p></div>
+          <div class="force-card"><span class="force-number">2,377</span><span class="force-label" data-en="Warning Shots" data-ne="चेतावनी गोली">Warning Shots</span><p data-en="Warning shots fired, with 1,046 in the Kathmandu Valley." data-ne="चेतावनी गोली चलाइयो, काठमाडौँ उपत्यकामा १,०४६।">Warning shots fired, with 1,046 in the Kathmandu Valley.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Damage Section -->
+    <section class="section section-dark" id="damage">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">06</span>
+          <h2 class="section-title" data-en="Destruction and Property Damage" data-ne="विनाश र सम्पत्ति क्षति">Destruction and Property Damage</h2>
+        </div>
+        <div class="kpi-row">
+          <div class="kpi-card"><span class="kpi-value">Rs 84-85B</span><span class="kpi-label" data-en="Estimated Damage" data-ne="अनुमानित क्षति">Estimated Damage</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="400">0</span><span class="kpi-label" data-en="Police Stations Destroyed" data-ne="प्रहरी चौकी नष्ट">Police Stations Destroyed</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="1342">0</span><span class="kpi-label" data-en="Weapons Looted" data-ne="हतियार लुटिएको">Weapons Looted</span></div>
+          <div class="kpi-card"><span class="kpi-value">~100K</span><span class="kpi-label" data-en="Rounds of Ammo Looted" data-ne="गोलाबारुद लुटिएको">Rounds of Ammo Looted</span></div>
+        </div>
+        <div class="damage-categories">
+          <h3 class="subsection-title" data-en="Major Sites Destroyed or Damaged" data-ne="नष्ट वा क्षतिग्रस्त प्रमुख स्थलहरू">Major Sites Destroyed or Damaged</h3>
+          <div class="damage-grid">
+            <div class="damage-card govt"><h4 data-en="Government Buildings" data-ne="सरकारी भवनहरू">Government Buildings</h4><ul><li>Singha Durbar (Administrative HQ)</li><li>Federal Parliament Building</li><li>Supreme Court (adjacent building)</li><li>Shital Niwas (President's Residence)</li><li>Baluwatar (PM's Residence)</li><li>Ministry of Health</li><li>Road Department</li><li>Commission for Investigation of Abuse of Authority</li></ul></div>
+            <div class="damage-card political"><h4 data-en="Political Residences" data-ne="राजनीतिक निवासहरू">Political Residences</h4><ul><li>KP Sharma Oli (PM) - Balkot residence</li><li>Sher Bahadur Deuba (former PM)</li><li>Pushpa Kamal Dahal (Prachanda)</li><li>Gagan Thapa</li><li>Bidya Devi Bhandari (former President)</li><li>Jhala Nath Khanal</li><li>Ramesh Lekhak</li><li>Numerous other MPs and ministers</li></ul></div>
+            <div class="damage-card security"><h4 data-en="Security Infrastructure" data-ne="सुरक्षा पूर्वाधार">Security Infrastructure</h4><ul><li>400+ police stations and offices</li><li>62 Armed Police Force facilities</li><li>28 prison facilities (mass breakouts)</li><li>Police personnel property: Rs 220M+ loss</li><li>500+ weapons still unaccounted for</li></ul></div>
+            <div class="damage-card private"><h4 data-en="Private and Media" data-ne="निजी र सञ्चारमाध्यम">Private and Media</h4><ul><li>Multiple Bhatbhateni Supermarket outlets</li><li>Kantipur media house and server room</li><li>Hilton Hotel, Kathmandu</li><li>Hotels in Pokhara lakeside</li><li>CG Electronics Digital Park</li><li>Chandragiri Cable Car station</li></ul></div>
+          </div>
+        </div>
+        <div class="chart-card chart-card-standalone">
+          <h3 class="chart-title" data-en="Weapons and Ammunition Looted" data-ne="लुटिएका हतियार र गोलाबारुद">Weapons and Ammunition Looted</h3>
+          <p class="chart-desc" data-en="Status of weapons seized from police stations by protesters, as of November 2025." data-ne="प्रदर्शनकारीहरूले प्रहरी चौकीबाट लुटेका हतियारहरूको स्थिति, नोभेम्बर २०२५ सम्म।">Status of weapons seized from police stations by protesters, as of November 2025.</p>
+          <div class="chart-wrap chart-wrap-bar"><canvas id="weaponsChart"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intelligence Failures -->
+    <section class="section" id="intelligence">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">07</span>
+          <h2 class="section-title" data-en="Intelligence and Coordination Failures" data-ne="गुप्तचर र समन्वय विफलताहरू">Intelligence and Coordination Failures</h2>
+        </div>
+        <p class="section-intro" data-en="The Karki Commission strongly criticised systemic intelligence failures and lack of inter-agency coordination." data-ne="कार्की आयोगले प्रणालीगत गुप्तचर विफलताहरू र अन्तर-एजेन्सी समन्वयको अभावको कडा आलोचना गर्यो।">The Karki Commission strongly criticised systemic intelligence failures and lack of inter-agency coordination.</p>
+        <div class="failures-grid">
+          <div class="failure-card"><div class="failure-number">1</div><h3 data-en="Discord Monitoring Failure" data-ne="Discord अनुगमन विफलता">Discord Monitoring Failure</h3><p data-en='The National Investigation Department (NID) failed to monitor digital platforms like Discord, where violent plans (including making Molotov cocktails and assaults on officials&apos; residences) were being openly organised. The "Youth Against Corruption" Discord server had over 145,000 members.' data-ne='राष्ट्रिय अनुसन्धान विभाग (NID) ले Discord जस्ता डिजिटल प्लेटफर्महरू अनुगमन गर्न असफल भयो, जहाँ हिंसात्मक योजनाहरू (मोलोटोभ कक्टेल बनाउने र अधिकारीहरूका निवासमा आक्रमण सहित) खुला रूपमा संगठित भइरहेको थियो।'>The National Investigation Department (NID) failed to monitor digital platforms like Discord, where violent plans (including making Molotov cocktails and assaults on officials' residences) were being openly organised. The "Youth Against Corruption" Discord server had over 145,000 members.</p></div>
+          <div class="failure-card"><div class="failure-number">2</div><h3 data-en="No Clear Rules of Engagement" data-ne="स्पष्ट संलग्नता नियम नभएको">No Clear Rules of Engagement</h3><p data-en="Security forces had inadequate crowd management protocols and unclear Rules of Engagement (ROE), leading to excessive and indiscriminate use of lethal force on Day 1. No attempt was made to stop the firing for over four hours." data-ne="सुरक्षा बलसँग अपर्याप्त भीड व्यवस्थापन प्रोटोकल र अस्पष्ट संलग्नता नियम (ROE) थियो, जसले दिन १ मा अत्यधिक र अन्धाधुन्ध घातक बल प्रयोग गर्न पुर्यायो।">Security forces had inadequate crowd management protocols and unclear Rules of Engagement (ROE), leading to excessive and indiscriminate use of lethal force on Day 1. No attempt was made to stop the firing for over four hours.</p></div>
+          <div class="failure-card"><div class="failure-number">3</div><h3 data-en="Inter-Agency Coordination Collapse" data-ne="अन्तर-एजेन्सी समन्वय पतन">Inter-Agency Coordination Collapse</h3><p data-en="There was a complete lack of coordination between Nepal Police, Armed Police Force (APF), and the Nepali Army. Military support was deployed far too late, arriving only around 4:00 PM on Day 2, after substantial damage had already occurred." data-ne="नेपाल प्रहरी, सशस्त्र प्रहरी बल (APF), र नेपाली सेनाबीच पूर्ण समन्वयको अभाव थियो। सैन्य सहायता धेरै ढिलो गरी तैनाथ गरिएको थियो।">There was a complete lack of coordination between Nepal Police, Armed Police Force (APF), and the Nepali Army. Military support was deployed far too late, arriving only around 4:00 PM on Day 2, after substantial damage had already occurred.</p></div>
+          <div class="failure-card"><div class="failure-number">4</div><h3 data-en="Failure to Secure Armouries" data-ne="शस्त्रागार सुरक्षित गर्न असफल">Failure to Secure Armouries</h3><p data-en="Then-Kathmandu Valley Police Chief Dan Bahadur Karki (now IGP) failed to adequately secure weapons and police offices, resulting in 1,342 firearms and approximately 100,000 rounds of ammunition being looted by protesters." data-ne="तत्कालीन काठमाडौँ उपत्यका प्रहरी प्रमुख डान बहादुर कार्की (अहिले IGP) ले हतियार र प्रहरी कार्यालयहरू पर्याप्त रूपमा सुरक्षित गर्न असफल भए, जसको कारण १,३४२ हतियार र लगभग १,००,००० राउन्ड गोलाबारुद लुटियो।">Then-Kathmandu Valley Police Chief Dan Bahadur Karki (now IGP) failed to adequately secure weapons and police offices, resulting in 1,342 firearms and approximately 100,000 rounds of ammunition being looted by protesters.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accountability Section -->
+    <section class="section section-dark" id="accountability">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">08</span>
+          <h2 class="section-title" data-en="Who is Held Accountable?" data-ne="कसलाई जवाफदेही बनाइएको छ?">Who is Held Accountable?</h2>
+        </div>
+        <p class="section-intro" data-en="The Karki Commission recommended criminal investigation, prosecution, and departmental action against key political, administrative, and security officials. Here is a breakdown by category." data-ne="कार्की आयोगले प्रमुख राजनीतिक, प्रशासनिक र सुरक्षा अधिकारीहरूविरुद्ध आपराधिक अनुसन्धान, अभियोजन र विभागीय कारबाहीको सिफारिस गरेको छ।">The Karki Commission recommended criminal investigation, prosecution, and departmental action against key political, administrative, and security officials. Here is a breakdown by category.</p>
+
+        <div class="accountability-tabs">
+          <button class="acc-tab active" data-acc="criminal">Criminal Investigation</button>
+          <button class="acc-tab" data-acc="section182">Action Under Section 182</button>
+          <button class="acc-tab" data-acc="police">Police Departmental</button>
+          <button class="acc-tab" data-acc="apf">Armed Police Force</button>
+          <button class="acc-tab" data-acc="army">Nepali Army</button>
+          <button class="acc-tab" data-acc="nid">Intelligence (NID)</button>
+          <button class="acc-tab" data-acc="other">Others</button>
+        </div>
+
+        <div class="acc-content active" id="acc-criminal">
+          <div class="acc-header"><span class="acc-badge criminal">Criminal Investigation Recommended</span><span class="acc-law">Sections 181 (negligence) and 182 (carelessness) of the National Penal Code, 2017</span></div>
+          <div class="acc-cards">
+            <div class="person-card person-arrested"><div class="person-role">Former Prime Minister</div><div class="person-name">KP Sharma Oli</div><div class="person-finding">Failed to stop the firing despite gunshots continuing for more than four hours. No corrective orders issued.</div><div class="person-status arrested" data-en="Arrested 28 March 2026" data-ne="२८ मार्च २०२६ मा गिरफ्तार">Arrested 28 March 2026</div></div>
+            <div class="person-card person-arrested"><div class="person-role">Former Home Minister</div><div class="person-name">Ramesh Lekhak</div><div class="person-finding">Failed to prevent or halt the use of lethal force against unarmed protesters.</div><div class="person-status arrested" data-en="Arrested 28 March 2026" data-ne="२८ मार्च २०२६ मा गिरफ्तार">Arrested 28 March 2026</div></div>
+            <div class="person-card"><div class="person-role">Former Inspector General of Police</div><div class="person-name">Chandra Kuber Khapung</div><div class="person-finding">As the head of Nepal Police, failed to ensure proper crowd management and halt the indiscriminate firing.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-section182">
+          <div class="acc-header"><span class="acc-badge warning">Action Under Section 182</span><span class="acc-law">National Penal Code, 2017 - Carelessness</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">Former Home Secretary</div><div class="person-name">Gokarna Mani Duwadi</div><div class="person-finding">Negligence in administrative oversight during the crisis.</div></div>
+            <div class="person-card"><div class="person-role">Armed Police Force IGP</div><div class="person-name">Raju Aryal</div><div class="person-finding">Failed to coordinate APF response effectively.</div></div>
+            <div class="person-card"><div class="person-role">NID Chief</div><div class="person-name">Hutaraj Thapa</div><div class="person-finding">Failure to gather and provide timely intelligence on planned violence.</div></div>
+            <div class="person-card"><div class="person-role">Kathmandu CDO</div><div class="person-name">Chhabilal Rijal</div><div class="person-finding">Negligence as the chief administrative officer of the affected district.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-police">
+          <div class="acc-header"><span class="acc-badge departmental">Departmental Action</span><span class="acc-law">Police Act and Regulations</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">AIG</div><div class="person-name">Siddha Bikram Shah</div><div class="person-finding">Departmental action for role in excessive use of force.</div></div>
+            <div class="person-card"><div class="person-role">DIG</div><div class="person-name">Om Bahadur Rana</div><div class="person-finding">Departmental action for command failures.</div></div>
+            <div class="person-card"><div class="person-role">SSP</div><div class="person-name">Bishwo Adhikari</div><div class="person-finding">Departmental action for operational failures.</div></div>
+            <div class="person-card"><div class="person-role">SSP</div><div class="person-name">Deep Shamsher</div><div class="person-finding">Departmental action for operational failures.</div></div>
+            <div class="person-card"><div class="person-role">Inspector</div><div class="person-name">Rishiram Kandel</div><div class="person-finding">Departmental action under Police Act and regulations.</div></div>
+            <div class="person-card highlight-warning"><div class="person-role">Current IGP (was Kathmandu Valley Police Chief)</div><div class="person-name">Dan Bahadur Karki</div><div class="person-finding">Warning recommended for failure to secure weapons and police offices on Day 2, leading to 1,342 weapons being looted.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-apf">
+          <div class="acc-header"><span class="acc-badge departmental">Departmental Action</span><span class="acc-law">Armed Police Force Act and Regulations</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">Operation Commander</div><div class="person-name">Narayan Dutta Poudel</div><div class="person-finding">Lack of coordination and command failures during the crisis.</div></div>
+            <div class="person-card"><div class="person-role">Brigade Commander</div><div class="person-name">Suresh Kumar Shrestha</div><div class="person-finding">Failure in APF operational coordination.</div></div>
+            <div class="person-card"><div class="person-role">SP</div><div class="person-name">Jeevan KC</div><div class="person-finding">Departmental action under APF Act and regulations.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-army">
+          <div class="acc-header"><span class="acc-badge army">Action Under Military Act</span><span class="acc-law">Military Act - Security lapses at key installations</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">Commander - Shital Niwas Security</div><div class="person-name">Manoj Baidwar</div><div class="person-finding">Failed to protect Shital Niwas (President's residence) from being attacked and set on fire.</div></div>
+            <div class="person-card"><div class="person-role">Commander - Baluwatar Security</div><div class="person-name">Diwakar Khadka</div><div class="person-finding">Failed to protect Baluwatar (Prime Minister's residence).</div></div>
+            <div class="person-card"><div class="person-role">Commander - Singha Durbar Security</div><div class="person-name">Ganesh Khadka</div><div class="person-finding">Failed to protect Singha Durbar Secretariat from arson.</div></div>
+            <div class="person-card"><div class="person-role">Commander - Parliament Security</div><div class="person-name">Santosh Dhungel</div><div class="person-finding">Failed to protect the Parliament building from being set on fire.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-nid">
+          <div class="acc-header"><span class="acc-badge nid">Action Recommended</span><span class="acc-law">Nepal Special Service Act and Regulations</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">Deputy Director, Valley Operations</div><div class="person-name">Krishna Prasad Khanal</div><div class="person-finding">Failed to provide timely intelligence information, despite violence being planned openly on Discord.</div></div>
+            <div class="person-card"><div class="person-role">Kathmandu District Chief, NID</div><div class="person-name">Riven Kumar Gachchadar</div><div class="person-finding">Failed to provide timely intelligence to prevent the escalation.</div></div>
+          </div>
+        </div>
+
+        <div class="acc-content" id="acc-other">
+          <div class="acc-header"><span class="acc-badge other">Criminal Investigation</span><span class="acc-law">Various provisions</span></div>
+          <div class="acc-cards">
+            <div class="person-card"><div class="person-role">Violent Infiltrators</div><div class="person-name">TOB Group Members</div><div class="person-finding">Arrived on motorcycles on September 9, incited demonstrators, and triggered violence. Criminal investigation and prosecution recommended.</div></div>
+            <div class="person-card"><div class="person-role">Day 2 Perpetrators</div><div class="person-name">Unidentified Individuals</div><div class="person-finding">In-depth investigation recommended using CCTV footage, BTS data, and digital evidence to identify those involved in arson, looting, and vandalism on Day 2.</div></div>
+          </div>
+        </div>
+
+        <div class="chart-card chart-card-standalone">
+          <h3 class="chart-title" data-en="Accountability by Category" data-ne="श्रेणीअनुसार जवाफदेहिता">Accountability by Category</h3>
+          <p class="chart-desc" data-en="Number of individuals recommended for action by the Karki Commission, by category of recommended action." data-ne="कार्की आयोगले कारबाहीको सिफारिस गरेका व्यक्तिहरूको संख्या, सिफारिस गरिएको कारबाहीको श्रेणीअनुसार।">Number of individuals recommended for action by the Karki Commission, by category of recommended action.</p>
+          <div class="chart-wrap"><canvas id="accountabilityChart"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="section" id="recommendations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">09</span>
+          <h2 class="section-title" data-en="10 Key Recommendations" data-ne="१० प्रमुख सिफारिसहरू">10 Key Recommendations</h2>
+        </div>
+        <p class="section-intro" data-en="The commission's 10 key recommendations, explained in plain language." data-ne="आयोगका १० प्रमुख सिफारिसहरू, सरल भाषामा व्याख्या गरिएको।">The commission's 10 key recommendations, explained in plain language.</p>
+        <div class="rec-grid">
+          <div class="rec-card"><div class="rec-number">1</div><h3 data-en="Prosecute Top Leadership" data-ne="शीर्ष नेतृत्व अभियोजन गर">Prosecute Top Leadership</h3><p data-en="Criminal investigation against former PM Oli, Home Minister Lekhak, and IGP Khapung under Sections 181 (negligence) and 182 (carelessness) of the National Penal Code for allowing gunfire to continue for over four hours." data-ne="चार घण्टाभन्दा बढी गोली चल्न दिएबापत राष्ट्रिय दण्ड संहिताको धारा १८१ (लापरवाही) र १८२ (बेहोसी) अन्तर्गत पूर्वप्रधानमन्त्री ओली, गृहमन्त्री लेखक र आइजीपी खपुङविरुद्ध आपराधिक अनुसन्धान।">Criminal investigation against former PM Oli, Home Minister Lekhak, and IGP Khapung under Sections 181 (negligence) and 182 (carelessness) of the National Penal Code for allowing gunfire to continue for over four hours.</p></div>
+          <div class="rec-card"><div class="rec-number">2</div><h3 data-en="Action Against Four Senior Officials" data-ne="चार वरिष्ठ अधिकारीविरुद्ध कारबाही">Action Against Four Senior Officials</h3><p data-en="Investigation under Section 182 against the Home Secretary, APF IGP, NID Chief, and Kathmandu CDO for their negligence during the crisis." data-ne="गृह सचिव, APF IGP, NID प्रमुख र काठमाडौँ CDO विरुद्ध संकटकालमा लापरवाहीका लागि धारा १८२ अन्तर्गत अनुसन्धान।">Investigation under Section 182 against the Home Secretary, APF IGP, NID Chief, and Kathmandu CDO for their negligence during the crisis.</p></div>
+          <div class="rec-card"><div class="rec-number">3</div><h3>Departmental Action: Nepal Police</h3><p>Departmental action against five Nepal Police officers (AIG Shah, DIG Rana, SSP Adhikari, SSP Shamsher, Inspector Kandel) under the Police Act.</p></div>
+          <div class="rec-card"><div class="rec-number">4</div><h3>Warning to Current IGP</h3><p>Warning under police regulations to current IGP Dan Bahadur Karki for failing to secure weapons and police offices on Day 2.</p></div>
+          <div class="rec-card"><div class="rec-number">5</div><h3>Departmental Action: APF</h3><p>Departmental action against three APF officers under the APF Act for lack of coordination and command failures.</p></div>
+          <div class="rec-card"><div class="rec-number">6</div><h3>Military Accountability</h3><p>Action under the Military Act against four Nepali Army commanders who failed to protect key installations (President's residence, PM's residence, Singha Durbar, Parliament).</p></div>
+          <div class="rec-card"><div class="rec-number">7</div><h3>Investigate TOB Group</h3><p>Criminal investigation against TOB group members who arrived on motorcycles on September 9 to incite violence and trigger destruction.</p></div>
+          <div class="rec-card"><div class="rec-number">8</div><h3>Deep Investigation into Day 2</h3><p>In-depth investigation using CCTV footage, BTS data, and digital evidence to identify individuals involved in arson, looting, and vandalism, including cash found at Deuba's residence.</p></div>
+          <div class="rec-card"><div class="rec-number">9</div><h3>NID Accountability</h3><p>Action under the Special Service Act against two NID officials for failing to provide timely intelligence about planned violence being organised on Discord.</p></div>
+          <div class="rec-card highlight-positive"><div class="rec-number">10</div><h3>Reward Brave Individuals</h3><p>Rewards for six police officers who risked their lives to protect colleagues and weapons, two civilians who saved police officers from mobs, and a scholarship for Ekta Shah who sat for her MBBS exam despite being injured in gunfire.</p></div>
+        </div>
+        <div class="commission-quote">
+          <blockquote data-en='"If implemented, this report can transform the country&apos;s face. The country may witness another Gen-Z movement if the government fails to implement the report&apos;s recommendations."' data-ne='"यो प्रतिवेदन कार्यान्वयन भयो भने देशको अनुहार बदल्न सक्छ। सरकारले प्रतिवेदनका सिफारिसहरू कार्यान्वयन गर्न असफल भयो भने देशमा अर्को जेन-जी आन्दोलन हुन सक्छ।"'>
+            "If implemented, this report can transform the country's face. The country may witness another Gen-Z movement if the government fails to implement the report's recommendations."
+          </blockquote>
+          <cite data-en="Justice Gauri Bahadur Karki, Commission Chair" data-ne="न्यायाधीश गौरी बहादुर कार्की, आयोग अध्यक्ष">Justice Gauri Bahadur Karki, Commission Chair</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break: Mourning Vigil -->
+    <div class="photo-break">
+      <img src="./assets/mourning-vigil.jpg" alt="Nepalis hold candlelight vigil mourning those killed in the Gen-Z protests" loading="lazy">
+      <div class="photo-caption">Citizens hold a mourning vigil for those killed during the September protests. Photo: IFEX / Getty Images</div>
+    </div>
+
+    <!-- Martyrs Memorial Section -->
+    <section class="section section-dark" id="martyrs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">10</span>
+          <h2 class="section-title" data-en="The 45 Declared Martyrs" data-ne="४५ घोषित शहीदहरू">The 45 Declared Martyrs</h2>
+        </div>
+        <p class="section-intro" data-en="On 27 March 2026, the Balen Shah cabinet declared 45 individuals who died during the Gen-Z protests as national martyrs. Their sacrifice gave Nepal its democratic voice." data-ne="२७ मार्च २०२६ मा, बलेन शाह मन्त्रिमण्डलले जेन-जी आन्दोलनमा मृत्यु भएका ४५ जनालाई राष्ट्रिय शहीद घोषणा गर्यो। तिनीहरूको बलिदानले नेपाललाई यसको लोकतान्त्रिक आवाज दियो।">On 27 March 2026, the Balen Shah cabinet declared 45 individuals who died during the Gen-Z protests as national martyrs. Their sacrifice gave Nepal its democratic voice.</p>
+
+        <div class="martyrs-memorial">
+          <div class="memorial-header">
+            <div class="memorial-flame">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5">
+                <path d="M12 2c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z" fill="rgba(194,59,59,0.2)"/>
+                <path d="M12 2c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z"/>
+              </svg>
+            </div>
+            <p class="memorial-dedication" data-en="In remembrance of those who gave their lives for Nepal's future" data-ne="नेपालको भविष्यका लागि ज्यान दिनेहरूको सम्झनामा">In remembrance of those who gave their lives for Nepal's future</p>
+          </div>
+          <div class="martyrs-grid">
+            <div class="martyr-card"><span class="martyr-num">1</span><span class="martyr-name">Buddhi Bahadur Tamang</span><span class="martyr-district">Kathmandu</span></div>
+            <div class="martyr-card"><span class="martyr-num">2</span><span class="martyr-name">Santosh Bishwakarma</span><span class="martyr-district">Udayapur</span></div>
+            <div class="martyr-card"><span class="martyr-num">3</span><span class="martyr-name">Sulabh Raj Shrestha</span><span class="martyr-district">Banke</span></div>
+            <div class="martyr-card"><span class="martyr-num">4</span><span class="martyr-name">Shreeram Chaulagain</span><span class="martyr-district">Morang</span></div>
+            <div class="martyr-card"><span class="martyr-num">5</span><span class="martyr-name">Ishwar Bahadur Adhikari</span><span class="martyr-district">Kathmandu</span></div>
+            <div class="martyr-card"><span class="martyr-num">6</span><span class="martyr-name">Aayush Thapa</span><span class="martyr-district">Banke</span></div>
+            <div class="martyr-card"><span class="martyr-num">7</span><span class="martyr-name">Gaurav Joshi</span><span class="martyr-district">Kailali</span></div>
+            <div class="martyr-card"><span class="martyr-num">8</span><span class="martyr-name">Yog Bahadur Shrestha</span><span class="martyr-district">Sindhupalchok</span></div>
+            <div class="martyr-card"><span class="martyr-num">9</span><span class="martyr-name">Madhav Saru Magar</span><span class="martyr-district">Arghakhanchi</span></div>
+            <div class="martyr-card"><span class="martyr-num">10</span><span class="martyr-name">Bimal Babu Bhatta</span><span class="martyr-district">Gorkha</span></div>
+            <div class="martyr-card"><span class="martyr-num">11</span><span class="martyr-name">Asahab Alam Thakurai</span><span class="martyr-district">Parsa</span></div>
+            <div class="martyr-card"><span class="martyr-num">12</span><span class="martyr-name">Sauran Kishor Shrestha</span><span class="martyr-district">Baglung</span></div>
+            <div class="martyr-card"><span class="martyr-num">13</span><span class="martyr-name">Subhash Kumar Bohara</span><span class="martyr-district">Bajhang</span></div>
+            <div class="martyr-card"><span class="martyr-num">14</span><span class="martyr-name">Rasik Khatiwada Khatri</span><span class="martyr-district">Kavre</span></div>
+            <div class="martyr-card"><span class="martyr-num">15</span><span class="martyr-name">Binod Manjhan</span><span class="martyr-district">Lalitpur</span></div>
+            <div class="martyr-card"><span class="martyr-num">16</span><span class="martyr-name">Dil Narayan Tamang</span><span class="martyr-district">Kavre</span></div>
+            <div class="martyr-card"><span class="martyr-num">17</span><span class="martyr-name">Yogendra Neupane</span><span class="martyr-district">Sindhuli</span></div>
+            <div class="martyr-card"><span class="martyr-num">18</span><span class="martyr-name">Abhishek Shrestha</span><span class="martyr-district">Sunsari</span></div>
+            <div class="martyr-card"><span class="martyr-num">19</span><span class="martyr-name">Mohan Sardar</span><span class="martyr-district">Sunsari</span></div>
+            <div class="martyr-card"><span class="martyr-num">20</span><span class="martyr-name">Chhatra Man Kuthumi</span><span class="martyr-district">Dhankuta</span></div>
+            <div class="martyr-card"><span class="martyr-num">21</span><span class="martyr-name">Ojhan Budha</span><span class="martyr-district">Bajura</span></div>
+            <div class="martyr-card"><span class="martyr-num">22</span><span class="martyr-name">Sajan Rai</span><span class="martyr-district">Sunsari</span></div>
+            <div class="martyr-card"><span class="martyr-num">23</span><span class="martyr-name">Anisha Parajuli</span><span class="martyr-district">Gorkha</span></div>
+            <div class="martyr-card"><span class="martyr-num">24</span><span class="martyr-name">Sar Kumar Rai</span><span class="martyr-district">Udayapur</span></div>
+            <div class="martyr-card"><span class="martyr-num">25</span><span class="martyr-name">Arjun Bhatta</span><span class="martyr-district">Gorkha</span></div>
+            <div class="martyr-card"><span class="martyr-num">26</span><span class="martyr-name">Dhiraj Shrestha</span><span class="martyr-district">Nuwakot</span></div>
+            <div class="martyr-card"><span class="martyr-num">27</span><span class="martyr-name">Dev Kumar Suvedi</span><span class="martyr-district">Sarlahi</span></div>
+            <div class="martyr-card"><span class="martyr-num">28</span><span class="martyr-name">Umesh Mahat</span><span class="martyr-district">Sindhupalchok</span></div>
+            <div class="martyr-card"><span class="martyr-num">29</span><span class="martyr-name">Prabin Kulung</span><span class="martyr-district">Sankhuwasabha</span></div>
+            <div class="martyr-card"><span class="martyr-num">30</span><span class="martyr-name">Nikhita Gautam</span><span class="martyr-district">Chitwan</span></div>
+            <div class="martyr-card"><span class="martyr-num">31</span><span class="martyr-name">Abhishek Chaulagain</span><span class="martyr-district">Dolakha</span></div>
+            <div class="martyr-card"><span class="martyr-num">32</span><span class="martyr-name">Bijay Chaudhary</span><span class="martyr-district">Siraha</span></div>
+            <div class="martyr-card"><span class="martyr-num">33</span><span class="martyr-name">Bhim Raj Dhami</span><span class="martyr-district">Kailali</span></div>
+            <div class="martyr-card"><span class="martyr-num">34</span><span class="martyr-name">Niraj Pant</span><span class="martyr-district">Baitadi</span></div>
+            <div class="martyr-card"><span class="martyr-num">35</span><span class="martyr-name">Deepak Singh Saud</span><span class="martyr-district">Baitadi</span></div>
+            <div class="martyr-card"><span class="martyr-num">36</span><span class="martyr-name">Shubharaj Balami Shrestha</span><span class="martyr-district">Nuwakot</span></div>
+            <div class="martyr-card"><span class="martyr-num">37</span><span class="martyr-name">Gyanendra Sedhai</span><span class="martyr-district">Jhapa</span></div>
+            <div class="martyr-card"><span class="martyr-num">38</span><span class="martyr-name">Dinesh Rajvanshi</span><span class="martyr-district">Jhapa</span></div>
+            <div class="martyr-card"><span class="martyr-num">39</span><span class="martyr-name">Kamal Bhandari</span><span class="martyr-district">Panchthar</span></div>
+            <div class="martyr-card"><span class="martyr-num">40</span><span class="martyr-name">Dipesh Sunuwar</span><span class="martyr-district">Sindhuli</span></div>
+            <div class="martyr-card"><span class="martyr-num">41</span><span class="martyr-name">Mahesh Budhathoki</span><span class="martyr-district">Dolakha</span></div>
+            <div class="martyr-card"><span class="martyr-num">42</span><span class="martyr-name">Lachhuman Rai</span><span class="martyr-district">Nuwakot</span></div>
+            <div class="martyr-card"><span class="martyr-num">43</span><span class="martyr-name">Milan Rai</span><span class="martyr-district">Sindhuli</span></div>
+            <div class="martyr-card"><span class="martyr-num">44</span><span class="martyr-name">Amrit Gurung</span><span class="martyr-district">Kaski</span></div>
+            <div class="martyr-card"><span class="martyr-num">45</span><span class="martyr-name">Uttam Thapa</span><span class="martyr-district">Darchula</span></div>
+          </div>
+          <p class="martyrs-source" data-en="Source: Government of Nepal, Cabinet decision 27 March 2026" data-ne="स्रोत: नेपाल सरकार, मन्त्रिपरिषद् निर्णय २७ मार्च २०२६">Source: Government of Nepal, Cabinet decision 27 March 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Break: Balen Shah Sworn In -->
+    <div class="photo-break">
+      <img src="./assets/balen-shah-oath.jpg" alt="Balendra (Balen) Shah takes oath as Nepal's 47th Prime Minister, 27 March 2026" loading="lazy">
+      <div class="photo-caption">Balendra (Balen) Shah, 32, takes the oath of office as Nepal's youngest Prime Minister, 27 March 2026. Photo: Indian Express</div>
+    </div>
+
+    <!-- What Happened Since (Expanded with Cabinet + Arrests) -->
+    <section class="section" id="aftermath">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">11</span>
+          <h2 class="section-title" data-en="What Happened Since" data-ne="त्यसपछि के भयो">What Happened Since</h2>
+        </div>
+        <p class="section-intro" data-en="From the uprising to democratic renewal: the political transformation that followed the deadliest days in Nepal's modern history." data-ne="विद्रोहदेखि लोकतान्त्रिक नवीकरणसम्म: नेपालको आधुनिक इतिहासका सबैभन्दा घातक दिनहरूपछिको राजनीतिक रूपान्तरण।">From the uprising to democratic renewal: the political transformation that followed the deadliest days in Nepal's modern history.</p>
+
+        <div class="aftermath-timeline">
+          <div class="aftermath-item">
+            <div class="aftermath-date">12 Sep 2025</div>
+            <div class="aftermath-content">
+              <h4 data-en="Interim PM Appointed" data-ne="अन्तरिम प्रधानमन्त्री नियुक्त">Interim PM Appointed</h4>
+              <p data-en="Former Chief Justice Sushila Karki was chosen as interim PM via an online Discord poll (3,833 out of 7,713 votes). She became the first woman to lead Nepal." data-ne="पूर्व प्रधानन्यायाधीश सुशीला कार्कीलाई अनलाइन Discord पोलमार्फत (७,७१३ मध्ये ३,८३३ मत) अन्तरिम प्रधानमन्त्री छानिएको थियो। उनी नेपालको नेतृत्व गर्ने पहिलो महिला बनिन्।">Former Chief Justice Sushila Karki was chosen as interim PM via an online Discord poll (3,833 out of 7,713 votes). She became the first woman to lead Nepal.</p>
+            </div>
+          </div>
+          <div class="aftermath-item">
+            <div class="aftermath-date">21 Sep 2025</div>
+            <div class="aftermath-content">
+              <h4 data-en="Karki Commission Formed" data-ne="कार्की आयोग गठन">Karki Commission Formed</h4>
+              <p data-en="Three-member judicial inquiry commission established under former Justice Gauri Bahadur Karki." data-ne="पूर्व न्यायाधीश गौरी बहादुर कार्कीको अध्यक्षतामा तीन सदस्यीय न्यायिक जाँच आयोग स्थापना भयो।">Three-member judicial inquiry commission established under former Justice Gauri Bahadur Karki.</p>
+            </div>
+          </div>
+          <div class="aftermath-item">
+            <div class="aftermath-date">4 Nov 2025</div>
+            <div class="aftermath-content">
+              <h4 data-en="45 Declared Martyrs" data-ne="४५ जना शहीद घोषित">45 Declared Martyrs</h4>
+              <p data-en="The government officially declared 45 individuals who died during the September protests as national martyrs." data-ne="सरकारले सेप्टेम्बर आन्दोलनमा मृत्यु भएका ४५ जनालाई आधिकारिक रूपमा राष्ट्रिय शहीद घोषणा गर्यो।">The government officially declared 45 individuals who died during the September protests as national martyrs.</p>
+            </div>
+          </div>
+          <div class="aftermath-item">
+            <div class="aftermath-date">5 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="General Election Held" data-ne="आम निर्वाचन सम्पन्न">General Election Held</h4>
+              <p data-en="Rastriya Swatantra Party (RSP) won a near-two-thirds majority (182/275 seats). 915,000 first-time voters. Two-thirds of prior lawmakers did not contest." data-ne="राष्ट्रिय स्वतन्त्र पार्टी (RSP) ले करिब दुई-तिहाइ बहुमत (२७५ मध्ये १८२ सिट) जित्यो। ९,१५,००० पहिलोपटक मतदाता। पहिलेका दुई-तिहाइ सांसदहरूले उम्मेदवारी दिएनन्।">Rastriya Swatantra Party (RSP) won a near-two-thirds majority (182/275 seats). 915,000 first-time voters. Two-thirds of prior lawmakers did not contest.</p>
+            </div>
+          </div>
+          <div class="aftermath-item">
+            <div class="aftermath-date">8 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="Commission Report Submitted" data-ne="आयोग प्रतिवेदन बुझाइयो">Commission Report Submitted</h4>
+              <p data-en="900+ page report with 8,000 pages of supplementary evidence submitted to PM Sushila Karki. Over 200 people were questioned, including former PM Oli." data-ne="९००+ पृष्ठको प्रतिवेदन ८,००० पृष्ठको पूरक प्रमाणसहित प्रधानमन्त्री सुशीला कार्कीलाई बुझाइयो। पूर्वप्रधानमन्त्री ओलीसहित २०० भन्दा बढी मानिसहरूलाई सोधपुछ गरिएको थियो।">900+ page report with 8,000 pages of supplementary evidence submitted to PM Sushila Karki. Over 200 people were questioned, including former PM Oli.</p>
+            </div>
+          </div>
+          <div class="aftermath-item">
+            <div class="aftermath-date">25 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="Report Made Public" data-ne="प्रतिवेदन सार्वजनिक">Report Made Public</h4>
+              <p data-en="The full investigation report entered the public domain, detailing all findings and recommendations." data-ne="पूर्ण अनुसन्धान प्रतिवेदन सार्वजनिक भयो, सबै निष्कर्ष र सिफारिसहरू विस्तृत गरियो।">The full investigation report entered the public domain, detailing all findings and recommendations.</p>
+            </div>
+          </div>
+          <div class="aftermath-item aftermath-highlight">
+            <div class="aftermath-date">27 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="PM Balendra Shah Sworn In" data-ne="प्रधानमन्त्री बलेन्द्र शाह शपथ ग्रहण">PM Balendra Shah Sworn In</h4>
+              <p data-en="Balendra (Balen) Shah, the 32-year-old former Mayor of Kathmandu, was sworn in as Prime Minister with a 14-member cabinet. His first cabinet meeting decided to implement the Karki Commission report immediately and declared 8-9 September as martyrs' days." data-ne="काठमाडौँका ३२ वर्षीय पूर्व मेयर बलेन्द्र (बलेन) शाहले १४ सदस्यीय मन्त्रिमण्डलसहित प्रधानमन्त्री पदको शपथ ग्रहण गरे। उनको पहिलो मन्त्रिपरिषद् बैठकले कार्की आयोग प्रतिवेदन तत्काल कार्यान्वयन गर्ने र ८-९ सेप्टेम्बरलाई शहीद दिवस घोषणा गर्ने निर्णय गर्यो।">Balendra (Balen) Shah, the 32-year-old former Mayor of Kathmandu, was sworn in as Prime Minister with a 14-member cabinet. His first cabinet meeting decided to implement the Karki Commission report immediately and declared 8-9 September as martyrs' days.</p>
+            </div>
+          </div>
+          <div class="aftermath-item aftermath-highlight">
+            <div class="aftermath-date">28 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="Oli and Lekhak Arrested" data-ne="ओली र लेखक गिरफ्तार">Oli and Lekhak Arrested</h4>
+              <p data-en='Former Home Minister Ramesh Lekhak arrested at 5 AM from Suryabinayak, Bhaktapur. Former PM KP Sharma Oli arrested later the same morning from his residence in Gundu, Bhaktapur. Both detained at Kathmandu District Police Office. Home Minister Sudan Gurung declared: "No one is above the law."' data-ne='पूर्वगृहमन्त्री रमेश लेखक बिहान ५ बजे सूर्यबिनायक, भक्तपुरबाट गिरफ्तार। पूर्वप्रधानमन्त्री केपी शर्मा ओली उही बिहान गुण्डु, भक्तपुरस्थित निवासबाट गिरफ्तार। दुवैलाई काठमाडौँ जिल्ला प्रहरी कार्यालयमा हिरासतमा राखियो। गृहमन्त्री सुदन गुरुङले भने: "कानुनमाथि कोही छैन।"'>Former Home Minister Ramesh Lekhak arrested at 5 AM from Suryabinayak, Bhaktapur. Former PM KP Sharma Oli arrested later the same morning from his residence in Gundu, Bhaktapur. Both detained at Kathmandu District Police Office. Home Minister Sudan Gurung declared: "No one is above the law."</p>
+            </div>
+          </div>
+          <div class="aftermath-item aftermath-highlight">
+            <div class="aftermath-date">29 Mar 2026</div>
+            <div class="aftermath-content">
+              <h4 data-en="UML Launches Nationwide Protests" data-ne="एमालेले देशव्यापी प्रदर्शन सुरु गर्यो">UML Launches Nationwide Protests</h4>
+              <p data-en='CPN-UML, condemning the arrests as &quot;vindictive, biased, and unlawful,&quot; launched nationwide protests demanding Oli&apos;s immediate release. District committees submitted memorandums to CDO offices across all 77 districts. Demonstrations and clashes with police reported in Kathmandu and Lalitpur. UML supporters burned copies of the Karki Commission report. Police HQ cancelled all leave and ordered officers to return to duty immediately. Oli remains hospitalised at Tribhuvan University Teaching Hospital.' data-ne='सीपीएन-एमालेले गिरफ्तारीलाई "प्रतिशोधात्मक, पक्षपातपूर्ण र गैरकानुनी" भन्दै ओलीको तत्काल रिहाइ माग गर्दै देशव्यापी प्रदर्शन सुरु गर्यो। जिल्ला कमिटीहरूले सबै ७७ जिल्लाका प्रजिअ कार्यालयहरूमा ज्ञापनपत्र बुझाए। काठमाडौँ र ललितपुरमा प्रदर्शन र प्रहरीसँग झडप। एमाले समर्थकहरूले कार्की आयोग प्रतिवेदनका प्रतिलिपि जलाए। प्रहरी मुख्यालयले सबै बिदा खारेज गर्यो।'>CPN-UML, condemning the arrests as "vindictive, biased, and unlawful," launched nationwide protests demanding Oli's immediate release. District committees submitted memorandums to CDO offices across all 77 districts. Demonstrations and clashes with police reported in Kathmandu and Lalitpur. UML supporters burned copies of the Karki Commission report. Police HQ cancelled all leave and ordered officers to return to duty immediately. Oli remains hospitalised at Tribhuvan University Teaching Hospital.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Balen Shah Cabinet -->
+        <div class="cabinet-section">
+          <h3 class="subsection-title" data-en="The New Cabinet (Sworn in 27 March 2026)" data-ne="नयाँ मन्त्रिमण्डल (२७ मार्च २०२६ मा शपथ ग्रहण)">The New Cabinet (Sworn in 27 March 2026)</h3>
+          <p class="cabinet-intro" data-en="PM Balendra Shah's government includes several faces of the Gen-Z movement, marking a generational shift in Nepali politics." data-ne="प्रधानमन्त्री बलेन्द्र शाहको सरकारमा जेन-जी आन्दोलनका धेरै अनुहारहरू छन्, जसले नेपाली राजनीतिमा पुस्तागत परिवर्तन देखाउँछ।">PM Balendra Shah's government includes several faces of the Gen-Z movement, marking a generational shift in Nepali politics.</p>
+          <div class="cabinet-grid">
+            <div class="cabinet-card cabinet-pm">
+              <div class="cabinet-role" data-en="Prime Minister" data-ne="प्रधानमन्त्री">Prime Minister</div>
+              <div class="cabinet-name">Balendra Shah</div>
+              <div class="cabinet-portfolio" data-en="Also: Defence, Industry" data-ne="साथै: रक्षा, उद्योग">Also: Defence, Industry</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Finance" data-ne="अर्थ">Finance</div>
+              <div class="cabinet-name">Dr. Swarnim Wagle</div>
+            </div>
+            <div class="cabinet-card cabinet-highlight">
+              <div class="cabinet-role" data-en="Home" data-ne="गृह">Home</div>
+              <div class="cabinet-name">Sudan Gurung</div>
+              <div class="cabinet-note" data-en="Face of the Gen-Z movement" data-ne="जेन-जी आन्दोलनको अनुहार">Face of the Gen-Z movement</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Foreign Affairs" data-ne="परराष्ट्र">Foreign Affairs</div>
+              <div class="cabinet-name">Shishir Khanal</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Law" data-ne="कानुन">Law</div>
+              <div class="cabinet-name">Sobita Gautam</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Energy" data-ne="ऊर्जा">Energy</div>
+              <div class="cabinet-name">Biraj Bhakta Shrestha</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Education (Spokesperson)" data-ne="शिक्षा (प्रवक्ता)">Education (Spokesperson)</div>
+              <div class="cabinet-name">Sasmit Pokharel</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="General Administration" data-ne="सामान्य प्रशासन">General Administration</div>
+              <div class="cabinet-name">Pramila Rawal</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Tourism" data-ne="पर्यटन">Tourism</div>
+              <div class="cabinet-name">Khadgaraj Poudel</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Agriculture" data-ne="कृषि">Agriculture</div>
+              <div class="cabinet-name">Gita Chaudhary</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Communication" data-ne="सञ्चार">Communication</div>
+              <div class="cabinet-name">Bikram Timilsina</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Labour" data-ne="श्रम">Labour</div>
+              <div class="cabinet-name">Dipak Sah</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Women and Children" data-ne="महिला तथा बालबालिका">Women and Children</div>
+              <div class="cabinet-name">Sita Badi</div>
+            </div>
+            <div class="cabinet-card">
+              <div class="cabinet-role" data-en="Health" data-ne="स्वास्थ्य">Health</div>
+              <div class="cabinet-name">Nisha Mehta</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">12</span>
+          <h2 class="section-title" data-en="Frequently Asked Questions" data-ne="बारम्बार सोधिने प्रश्नहरू">Frequently Asked Questions</h2>
+        </div>
+        <p class="section-intro" data-en="Quick answers for people searching for the Karki Aayog report, the Nepal Gen-Z protest report, and the purpose of this website." data-ne="कार्की आयोग प्रतिवेदन, नेपाल जेन-जी आन्दोलन प्रतिवेदन, र यस वेबसाइटको उद्देश्यबारे खोज्ने मानिसहरूका लागि छिटो उत्तरहरू।">Quick answers for people searching for the Karki Aayog report, the Nepal Gen-Z protest report, and the purpose of this website.</p>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question" data-en="What is the Karki Aayog report?" data-ne="कार्की आयोग प्रतिवेदन भनेको के हो?">What is the Karki Aayog report?</summary>
+            <div class="faq-answer">
+              <p data-en="The Karki Aayog report is the judicial inquiry commission report on Nepal's September 2025 Gen-Z protests. This website summarises the report's key findings, timeline, casualties, accountability recommendations, and political aftermath in plain language." data-ne="कार्की आयोग प्रतिवेदन भनेको नेपालको सेप्टेम्बर २०२५ को जेन-जी आन्दोलनबारे तयार गरिएको न्यायिक जाँच आयोगको प्रतिवेदन हो। यो वेबसाइटले प्रतिवेदनका मुख्य निष्कर्ष, घटनाक्रम, हताहत, जवाफदेहिता सिफारिस, र त्यसपछिको राजनीतिक अवस्थालाई सरल भाषामा प्रस्तुत गर्छ।">The Karki Aayog report is the judicial inquiry commission report on Nepal's September 2025 Gen-Z protests. This website summarises the report's key findings, timeline, casualties, accountability recommendations, and political aftermath in plain language.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question" data-en="Why was this website created?" data-ne="यो वेबसाइट किन बनाइएको हो?">Why was this website created?</summary>
+            <div class="faq-answer">
+              <p data-en="The original report is more than 900 pages long. This site was created so students, researchers, journalists, and ordinary citizens can quickly understand the most important findings without reading the entire document first." data-ne="मूल प्रतिवेदन ९०० भन्दा बढी पृष्ठको छ। विद्यार्थी, अनुसन्धानकर्ता, पत्रकार, र सर्वसाधारणले पूरै दस्तावेज सुरुमा नपढीकनै मुख्य निष्कर्ष छिट्टै बुझ्न सकून् भनेर यो साइट बनाइएको हो।">The original report is more than 900 pages long. This site was created so students, researchers, journalists, and ordinary citizens can quickly understand the most important findings without reading the entire document first.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question" data-en="Is this the full official report?" data-ne="के यो पूर्ण आधिकारिक प्रतिवेदन हो?">Is this the full official report?</summary>
+            <div class="faq-answer">
+              <p data-en="No. This is an interactive public summary of the report and related reporting. It should be used as a guide and overview alongside the full official report and source material." data-ne="होइन। यो प्रतिवेदन र सम्बन्धित समाचार सामग्रीको अन्तरक्रियात्मक सार्वजनिक सारांश हो। यसलाई पूर्ण आधिकारिक प्रतिवेदन र स्रोत सामग्रीसँगै मार्गदर्शक र अवलोकनका रूपमा प्रयोग गर्नुपर्छ।">No. This is an interactive public summary of the report and related reporting. It should be used as a guide and overview alongside the full official report and source material.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question" data-en="Can people contribute to this project?" data-ne="के मानिसहरूले यस परियोजनामा योगदान दिन सक्छन्?">Can people contribute to this project?</summary>
+            <div class="faq-answer">
+              <p data-en="Yes. The repository is being prepared for public contributions so people can suggest factual corrections, improve sourcing, refine the design, and add new explanatory material that helps readers understand the report." data-ne="सक्छन्। यस परियोजनाको रिपोजिटरी सार्वजनिक योगदानका लागि तयार पारिँदैछ ताकि मानिसहरूले तथ्यगत सुधार सुझाव दिन, स्रोतहरू बलियो बनाउन, डिजाइन सुधार गर्न, र पाठकलाई प्रतिवेदन बुझ्न मद्दत गर्ने नयाँ व्याख्यात्मक सामग्री थप्न सकून्।">Yes. The repository is being prepared for public contributions so people can suggest factual corrections, improve sourcing, refine the design, and add new explanatory material that helps readers understand the report.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3 data-en="About This Site" data-ne="यस साइटबारे">About This Site</h3>
+            <p data-en="This website summarises the findings of the Gauri Bahadur Karki Commission report on the September 2025 Gen-Z protests in Nepal. It was created to make the 900+ page report accessible to every citizen. All data is sourced from published reports and official records." data-ne="यो वेबसाइटले सेप्टेम्बर २०२५ को नेपालको जेन-जी आन्दोलनमा गौरी बहादुर कार्की आयोग प्रतिवेदनका निष्कर्षहरू सारांशित गर्छ। यो ९००+ पृष्ठको प्रतिवेदन हरेक नागरिकका लागि पहुँचयोग्य बनाउन सिर्जना गरिएको हो।">This website summarises the findings of the Gauri Bahadur Karki Commission report on the September 2025 Gen-Z protests in Nepal. It was created to make the 900+ page report accessible to every citizen. All data is sourced from published reports and official records.</p>
+          </div>
+          <div class="footer-sources">
+            <h3>Sources</h3>
+            <ul>
+              <li><a href="https://kathmandupost.com/national/2026/03/25/karki-commission-s-recommendations-on-the-gen-z-protests-explained-in-10-points" target="_blank" rel="noopener noreferrer">Kathmandu Post - 10 Points Explained</a></li>
+              <li><a href="https://www.hrw.org/news/2026/02/12/nepal-publish-reports-on-violent-crackdowns-on-protests" target="_blank" rel="noopener noreferrer">Human Rights Watch Report</a></li>
+              <li><a href="https://hsph.harvard.edu/atrocity-prevention-lab/news/the-2025-gen-z-uprising-in-nepal-a-three-part-analysis/" target="_blank" rel="noopener noreferrer">Harvard Three-Part Analysis</a></li>
+              <li><a href="https://www.cnn.com/2026/03/28/asia/nepal-kp-sharma-oli-arrested-protests-intl-hnk" target="_blank" rel="noopener noreferrer">CNN - Oli Arrested</a></li>
+              <li><a href="https://thehimalayantimes.com/nepal/ministers-of-balen-led-cabinet" target="_blank" rel="noopener noreferrer">Himalayan Times - Balen Cabinet</a></li>
+              <li><a href="https://en.himalpress.com/45-victims-of-gen-z-protests-declared-martyrs-with-namelist/" target="_blank" rel="noopener noreferrer">HimalPress - 45 Declared Martyrs</a></li>
+              <li><a href="https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests" target="_blank" rel="noopener noreferrer">Kathmandu Post - UML Nationwide Protests</a></li>
+              <li><a href="https://www.bbc.com/news/articles/cn89ry7y835o" target="_blank" rel="noopener noreferrer">BBC - Oli Arrested Over Protest Crackdown</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/2025_Nepalese_Gen_Z_protests" target="_blank" rel="noopener noreferrer">Wikipedia - 2025 Nepalese Gen Z Protests</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-en="Created to educate and inform. Data from published reports and official records. Not affiliated with any political party or government body." data-ne="शिक्षित र सूचित गर्न सिर्जना गरिएको। प्रकाशित प्रतिवेदन र आधिकारिक अभिलेखबाट डाटा। कुनै राजनीतिक दल वा सरकारी निकायसँग सम्बद्ध छैन।">Created to educate and inform. Data from published reports and official records. Not affiliated with any political party or government body.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
