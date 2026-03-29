@@ -209,7 +209,7 @@
   // ---- Scroll Reveal ----
   function setupReveal() {
     const items = document.querySelectorAll(
-      '.info-card, .trigger-card, .tl-item, .kpi-card, .chart-card, .force-card, .damage-card, .failure-card, .rec-card, .person-card, .aftermath-item, .forensic-finding, .commission-quote, .chart-card-standalone, .martyr-card, .cabinet-card, .photo-break'
+      '.info-card, .trigger-card, .tl-item, .kpi-card, .chart-card, .force-card, .damage-card, .failure-card, .rec-card, .person-card, .aftermath-item, .forensic-finding, .commission-quote, .chart-card-standalone, .martyr-card, .cabinet-card, .photo-break, .platform-card, .discord-card, .victim-card, .intl-card, .thread-card, .tracker-item, .ban-date-card'
     );
     items.forEach(el => el.classList.add('reveal'));
 
@@ -524,6 +524,120 @@
               stacked: true,
               grid: { color: c.gridColor },
               ticks: { color: c.textMuted, font: { size: 10 }, callback: (v) => v >= 1000 ? (v / 1000) + 'K' : v }
+            }
+          }
+        }
+      });
+    }
+
+    // Election Seats Comparison (Grouped Bar)
+    const elSeatsCtx = document.getElementById('electionSeatsChart');
+    if (elSeatsCtx) {
+      charts.electionSeats = new Chart(elSeatsCtx, {
+        type: 'bar',
+        data: {
+          labels: ['RSP', 'Nepali Congress', 'CPN-UML', 'Maoist/NCP', 'Others'],
+          datasets: [
+            {
+              label: '2022',
+              data: [21, 89, 78, 32, 55],
+              backgroundColor: c.textFaint,
+              borderRadius: 4,
+              borderSkipped: false,
+              barPercentage: 0.7,
+              categoryPercentage: 0.6
+            },
+            {
+              label: '2026',
+              data: [182, 38, 25, 17, 13],
+              backgroundColor: c.accent,
+              borderRadius: 4,
+              borderSkipped: false,
+              barPercentage: 0.7,
+              categoryPercentage: 0.6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { color: c.textMuted, font: { size: 11 }, usePointStyle: true, pointStyleWidth: 12, padding: 16 }
+            },
+            datalabels: {
+              anchor: 'end',
+              align: 'end',
+              color: c.text,
+              font: { weight: 'bold', size: 11 },
+              display: function(ctx) { return ctx.dataset.data[ctx.dataIndex] > 10; }
+            },
+            tooltip: {
+              backgroundColor: c.surface,
+              titleColor: c.text,
+              bodyColor: c.textMuted,
+              borderColor: c.divider,
+              borderWidth: 1
+            }
+          },
+          scales: {
+            y: {
+              grid: { color: c.gridColor },
+              ticks: { color: c.textMuted, font: { size: 11 } },
+              max: 200
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: c.text, font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    // Election Vote Share (Doughnut)
+    const elVoteCtx = document.getElementById('electionVoteShareChart');
+    if (elVoteCtx) {
+      charts.electionVote = new Chart(elVoteCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['RSP (47.8%)', 'Nepali Congress (19.1%)', 'CPN-UML (13.4%)', 'NCP (7.5%)', 'Others (12.2%)'],
+          datasets: [{
+            data: [47.8, 19.1, 13.4, 7.5, 12.2],
+            backgroundColor: [c.accent, c.info, c.warning, '#7c6eb5', c.textFaint],
+            borderColor: c.surface,
+            borderWidth: 3,
+            hoverOffset: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '55%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: c.textMuted,
+                font: { size: 11 },
+                padding: 12,
+                usePointStyle: true,
+                pointStyleWidth: 12
+              }
+            },
+            datalabels: {
+              color: '#fff',
+              font: { weight: 'bold', size: 12 },
+              formatter: function(value) { return value + '%'; },
+              display: function(ctx) { return ctx.dataset.data[ctx.dataIndex] > 6; }
+            },
+            tooltip: {
+              backgroundColor: c.surface,
+              titleColor: c.text,
+              bodyColor: c.textMuted,
+              borderColor: c.divider,
+              borderWidth: 1
             }
           }
         }

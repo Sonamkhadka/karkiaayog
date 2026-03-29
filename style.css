@@ -1809,3 +1809,454 @@
     max-height: 300px;
   }
 }
+
+/* ==========================================
+   NEW SECTIONS - SOCIAL MEDIA BAN, DISCORD,
+   VICTIM STORIES, INTERNATIONAL, COMPARISON,
+   ELECTION RESULTS, IMPLEMENTATION TRACKER
+   ========================================== */
+
+/* --- Social Media Ban Timeline --- */
+.ban-timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.ban-date-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  min-width: 160px;
+}
+
+.ban-date-start {
+  border-left: 3px solid var(--color-accent);
+}
+
+.ban-date-end {
+  border-left: 3px solid var(--color-accent);
+}
+
+.ban-date-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.ban-date-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ban-arrow {
+  flex-shrink: 0;
+}
+
+.banned-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.banned-grid-small {
+  max-width: 640px;
+}
+
+.platform-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  transition: var(--transition-interactive);
+}
+
+.platform-card.banned {
+  border-left: 3px solid var(--color-accent);
+}
+
+.platform-card.not-banned {
+  border-left: 3px solid #4caf7a;
+}
+
+.platform-name {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.platform-status-icon {
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.platform-card.banned .platform-status-icon {
+  color: var(--color-accent);
+}
+
+.platform-card.not-banned .platform-status-icon {
+  color: #4caf7a;
+}
+
+/* --- Discord Revolution --- */
+.discord-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.discord-card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: var(--transition-interactive);
+}
+
+.discord-card:hover {
+  border-color: var(--color-border);
+  transform: translateY(-2px);
+}
+
+.discord-card-icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.discord-card h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.discord-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* --- Victim Stories --- */
+.victim-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+.victim-card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.victim-header {
+  margin-bottom: var(--space-4);
+}
+
+.victim-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.victim-meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.victim-age,
+.victim-district {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.victim-detail {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.victim-source {
+  font-size: var(--text-xs);
+  font-style: normal;
+}
+
+.victim-source a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.victim-source a:hover {
+  color: var(--color-text);
+}
+
+/* --- International Reaction --- */
+.intl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.intl-card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border-top: 3px solid var(--color-accent);
+}
+
+.intl-org {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.intl-statement {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* --- Global Comparison Table --- */
+.comparison-table-wrap {
+  overflow-x: auto;
+  margin-bottom: var(--space-10);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-divider);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.comparison-table th {
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: var(--text-xs);
+  padding: var(--space-4) var(--space-4);
+  text-align: left;
+  border-bottom: 2px solid var(--color-divider);
+  white-space: nowrap;
+}
+
+.comparison-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-divider);
+  color: var(--color-text-muted);
+  vertical-align: top;
+}
+
+.comparison-table td strong {
+  color: var(--color-text);
+}
+
+.comparison-row-highlight {
+  background: rgba(194, 59, 59, 0.06);
+}
+
+.comparison-row-highlight td {
+  color: var(--color-text);
+}
+
+.common-threads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+}
+
+.thread-card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* --- Election Results --- */
+/* Reuses existing chart-card, kpi-row, kpi-card styles */
+
+/* --- Implementation Tracker --- */
+.tracker-summary {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.tracker-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+}
+
+.tracker-stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.tracker-done .tracker-stat-value { color: #4caf7a; }
+.tracker-progress .tracker-stat-value { color: #e0993e; }
+.tracker-not-started .tracker-stat-value { color: var(--color-text-muted); }
+
+.tracker-stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tracker-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tracker-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  transition: var(--transition-interactive);
+}
+
+.tracker-item:hover {
+  border-color: var(--color-border);
+}
+
+.tracker-status-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.status-done .tracker-status-icon { color: #4caf7a; }
+.status-in-progress .tracker-status-icon { color: #e0993e; }
+.status-not-started .tracker-status-icon { color: var(--color-text-muted); opacity: 0.5; }
+
+.tracker-content h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.tracker-content p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Spinner animation for in-progress items */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid var(--color-divider);
+  border-top-color: #e0993e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Mobile Responsiveness for New Sections --- */
+@media (max-width: 640px) {
+  .ban-timeline-header {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .ban-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .banned-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-2);
+  }
+  
+  .discord-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .victim-stories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .intl-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .common-threads-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table {
+    font-size: var(--text-xs);
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  .tracker-summary {
+    flex-direction: column;
+  }
+  
+  .tracker-item {
+    padding: var(--space-3) var(--space-4);
+  }
+}
