@@ -2,16 +2,29 @@
 
 Interactive public summary of the Karki Aayog report on Nepal's September 2025 Gen-Z protests.
 
-This project is designed to make a long public report easier to understand through a single-page website with timeline, casualties, accountability findings, recommendations, and source links.
+This project makes the 900+ page judicial inquiry commission report accessible to every citizen through an interactive single-page website with timelines, data visualisations, accountability findings, a martyrs memorial, and bilingual (English/Nepali) content.
 
-Repository: [github.com/Sonamkhadka/karkiaayog](https://github.com/Sonamkhadka/karkiaayog)
+**Live site:** [karkiaayog.netlify.app](https://karkiaayog.netlify.app)
+
+## Features
+
+- Full-width photo journalism from the protests, parliament fire, and aftermath
+- Interactive charts (Chart.js) for casualties, ammunition, and accountability data
+- Bilingual English/Nepali language toggle
+- 45 declared martyrs memorial with names and districts
+- Complete political timeline from the uprising through to Oli's arrest (28 March 2026) and UML counter-protests (29 March 2026)
+- Balen Shah cabinet with all 14 ministers
+- Dark/light mode toggle
+- Responsive design for mobile and desktop
+- Scroll-reveal animations
+- SEO metadata, sitemap, and robots.txt
 
 ## Stack
 
 - HTML
-- CSS
+- CSS (custom properties, no framework)
 - Vanilla JavaScript
-- Chart.js
+- Chart.js with datalabels plugin
 - Express for local preview
 
 ## Local development
@@ -29,7 +42,11 @@ You can use a different port with:
 PORT=8080 npm start
 ```
 
-## Netlify deployment
+Or simply open `index.html` directly in a browser (charts require an internet connection for the Chart.js CDN).
+
+## Deployment
+
+### Netlify (recommended)
 
 This site is static and can be deployed directly on Netlify.
 
@@ -38,28 +55,48 @@ Recommended settings:
 - Build command: leave empty
 - Publish directory: `.`
 
-A basic [`netlify.toml`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/netlify.toml) is included for convenience.
+A [`netlify.toml`](netlify.toml) is included for convenience.
 
-## Before launch
+### Other hosts
 
-- Update the canonical URL in [`index.html`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/index.html)
-- Update [`sitemap.xml`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/sitemap.xml) and [`robots.txt`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/robots.txt) if your final domain is not `https://karkiaayog.netlify.app/`
-- Verify all third-party source links
-- Confirm rights and attribution for every image in `assets/`
+Works with any static hosting service (Vercel, GitHub Pages, Cloudflare Pages). No build step required.
+
+## Before launch checklist
+
+- [ ] Update the canonical URL in [`index.html`](index.html) if using a custom domain
+- [ ] Update [`sitemap.xml`](sitemap.xml) and [`robots.txt`](robots.txt) with the final domain
+- [ ] Verify all third-party source links are still live
+- [ ] Confirm rights and attribution for every image in `assets/`
 
 ## Contributing
 
-Contributions are welcome. Please read [`CONTRIBUTING.md`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/CONTRIBUTING.md) before opening a pull request.
+Contributions are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
 
 Quick ways to help:
 
-- report factual errors or broken links
-- suggest stronger source material
-- improve readability, accessibility, and mobile UX
-- improve Nepali and English copy
-- add better SEO or discoverability improvements
+- Report factual errors or broken links
+- Suggest stronger source material
+- Improve readability, accessibility, and mobile UX
+- Improve Nepali and English copy
+- Add better SEO or discoverability improvements
+- Add new data visualisations or interactive features
 
 If you are not changing code, opening an issue with sources and notes is still useful.
+
+See the [open issues](https://github.com/Sonamkhadka/karkiaayog/issues) for current tasks.
+
+## Sources
+
+All data is sourced from published reports and official records:
+
+- [Kathmandu Post - Karki Commission 10 Points](https://kathmandupost.com/national/2026/03/25/karki-commission-s-recommendations-on-the-gen-z-protests-explained-in-10-points)
+- [Human Rights Watch](https://www.hrw.org/news/2026/02/12/nepal-publish-reports-on-violent-crackdowns-on-protests)
+- [Harvard Atrocity Prevention Lab](https://hsph.harvard.edu/atrocity-prevention-lab/news/the-2025-gen-z-uprising-in-nepal-a-three-part-analysis/)
+- [CNN - Oli Arrested](https://www.cnn.com/2026/03/28/asia/nepal-kp-sharma-oli-arrested-protests-intl-hnk)
+- [BBC - Nepal's ex-PM arrested](https://www.bbc.com/news/articles/cn89ry7y835o)
+- [Himalayan Times - Balen Cabinet](https://thehimalayantimes.com/nepal/ministers-of-balen-led-cabinet)
+- [HimalPress - 45 Declared Martyrs](https://en.himalpress.com/45-victims-of-gen-z-protests-declared-martyrs-with-namelist/)
+- [Kathmandu Post - UML Protests](https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests)
 
 ## License
 
