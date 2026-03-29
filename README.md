@@ -4,6 +4,8 @@ Interactive public summary of the Karki Aayog report on Nepal's September 2025 G
 
 This project is designed to make a long public report easier to understand through a single-page website with timeline, casualties, accountability findings, recommendations, and source links.
 
+Repository: [github.com/Sonamkhadka/karkiaayog](https://github.com/Sonamkhadka/karkiaayog)
+
 ## Stack
 
 - HTML
@@ -41,13 +43,23 @@ A basic [`netlify.toml`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aay
 ## Before launch
 
 - Update the canonical URL in [`index.html`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/index.html)
-- Update [`sitemap.xml`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/sitemap.xml) and [`robots.txt`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/robots.txt) if your final domain is not `https://karki-aayog-report.netlify.app/`
+- Update [`sitemap.xml`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/sitemap.xml) and [`robots.txt`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/robots.txt) if your final domain is not `https://karkiaayog.netlify.app/`
 - Verify all third-party source links
 - Confirm rights and attribution for every image in `assets/`
 
 ## Contributing
 
 Contributions are welcome. Please read [`CONTRIBUTING.md`](/Users/sonamkhadka/Desktop/Developer/projects/karki-aayog-report/CONTRIBUTING.md) before opening a pull request.
+
+Quick ways to help:
+
+- report factual errors or broken links
+- suggest stronger source material
+- improve readability, accessibility, and mobile UX
+- improve Nepali and English copy
+- add better SEO or discoverability improvements
+
+If you are not changing code, opening an issue with sources and notes is still useful.
 
 ## License
 
