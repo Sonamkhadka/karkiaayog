@@ -756,4 +756,36 @@
     })
     .catch(error => console.error('Error fetching github stars:', error));
 
+  // ---- Latest Updates ----
+  const updatesTrack = document.getElementById('updates-track');
+  if (updatesTrack) {
+    fetch('./updates.json')
+      .then(r => r.json())
+      .then(updates => {
+        if (!updates.length) {
+          updatesTrack.innerHTML = '<p style="color: var(--color-text-muted); font-size: var(--text-sm);">No updates yet.</p>';
+          return;
+        }
+        updatesTrack.innerHTML = updates.map(u => {
+          const tagClass = u.tag.toLowerCase().replace(/\s+/g, '-');
+          const sourceLink = u.source
+            ? `<a href="${u.source}" target="_blank" rel="noopener noreferrer" class="update-source-link">Source &rarr;</a>`
+            : '';
+          return `
+            <div class="tl-item">
+              <div class="tl-time">${u.date}</div>
+              <div class="tl-content">
+                <div class="tl-tag ${tagClass}">${u.tag}</div>
+                <h4>${u.title}</h4>
+                <p>${u.body}</p>
+                ${sourceLink}
+              </div>
+            </div>`;
+        }).join('');
+      })
+      .catch(() => {
+        updatesTrack.innerHTML = '<p style="color: var(--color-text-muted); font-size: var(--text-sm);">Could not load updates.</p>';
+      });
+  }
+
 })();

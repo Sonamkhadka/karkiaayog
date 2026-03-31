@@ -983,6 +983,21 @@
 .tl-tag.death { background: rgba(194,59,59,0.25); color: var(--color-accent); }
 .tl-tag.political { background: rgba(212,168,67,0.15); color: var(--color-accent-2); }
 .tl-tag.destruction { background: rgba(224,153,62,0.2); color: var(--color-warning); }
+/* Update feed tags */
+.tl-tag.accountability { background: rgba(194,59,59,0.15); color: var(--color-accent); }
+.tl-tag.legal { background: rgba(194,59,59,0.15); color: var(--color-accent); }
+.tl-tag.international { background: rgba(91,142,201,0.15); color: var(--color-info); }
+.tl-tag.report { background: rgba(224,153,62,0.15); color: var(--color-warning); }
+.tl-tag.implementation { background: rgba(76,175,122,0.15); color: var(--color-success); }
+
+.update-source-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.update-source-link:hover { text-decoration: underline; }
 
 @media (max-width: 600px) {
   .tl-item { grid-template-columns: 1fr; }

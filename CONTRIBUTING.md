@@ -4,8 +4,34 @@ Thanks for contributing to the Karki Aayog Report project.
 
 This project is meant to stay active, useful, and publicly understandable. The best contributions are the ones that improve factual clarity, sourcing, accessibility, and reach.
 
+## Adding a news update
+
+The easiest contribution is adding a news item to the **Latest Updates** section. You don't need to clone the repo — you can do it entirely in your browser:
+
+1. Open [`updates.json`](https://github.com/Sonamkhadka/karkiaayog/blob/main/updates.json) on GitHub
+2. Click the pencil (Edit) icon — GitHub will fork the repo to your account automatically
+3. Add a new entry at the **top** of the array following this format:
+
+```json
+{
+  "date": "April 1, 2026",
+  "tag": "Accountability",
+  "title": "Short headline here",
+  "body": "One or two sentences describing the development.",
+  "source": "https://link-to-your-source.com"
+}
+```
+
+**Valid tag values:** `Accountability`, `Legal`, `Political`, `International`, `Report`, `Implementation`
+
+4. Include a source link — unverified claims will not be merged
+5. Submit a pull request with a brief note on the source
+
+---
+
 ## What to contribute
 
+- news updates (see above)
 - factual corrections
 - improved sourcing and citations
 - accessibility fixes
