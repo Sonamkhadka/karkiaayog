@@ -2025,6 +2025,55 @@
   margin-top: var(--space-2);
 }
 
+.cabinet-decisions-box,
+.cabinet-reform-box {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.cabinet-decisions-box h4,
+.cabinet-reform-box h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.cabinet-decisions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cabinet-decisions-list li {
+  position: relative;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.cabinet-decisions-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+
+.cabinet-reform-box p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
 @media (max-width: 600px) {
   .cabinet-pm { grid-column: span 1; }
   .cabinet-grid { grid-template-columns: 1fr 1fr; }
