@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L60H00WP3M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L60H00WP3M');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Happened Since | Karki Aayog Report</title>
+  <meta name="description" content="Elections, accountability, implementation tracker, and latest developments following the Karki Commission report on Nepal's September 2025 Gen-Z protests.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f1114">
+  <link rel="canonical" href="https://karkiaayog.netlify.app/updates.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Karki Aayog Report">
+  <meta property="og:title" content="What Happened Since | Karki Aayog Report">
+  <meta property="og:description" content="Elections, accountability, implementation tracker, and latest news following the Karki Commission report on Nepal's 2025 protests.">
+  <meta property="og:url" content="https://karkiaayog.netlify.app/updates.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Happened Since | Karki Aayog Report">
+  <meta name="twitter:description" content="Elections, accountability, implementation tracker, and latest news following the Karki Commission report on Nepal's 2025 protests.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@300..700&family=Noto+Sans+Devanagari:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="Karki Aayog Report Logo">
+          <rect x="2" y="2" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 22V10h2v5l4-5h3l-5 5.5L17.5 22H15l-4-5.5-1 1V22H8z" fill="currentColor"/>
+          <circle cx="22" cy="10" r="2" fill="var(--color-accent)"/>
+          <path d="M22 14v8" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Karki Aayog</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="./index.html" class="nav-link" data-en="← The Report" data-ne="← प्रतिवेदन">← The Report</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">
+            <span data-en="What Happened Since" data-ne="त्यसपछि">What Happened Since</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-dropdown-content">
+            <a href="#global-comparison" class="nav-link" data-en="Global Comparison" data-ne="विश्व तुलना">Global Comparison</a>
+            <a href="#election-results" class="nav-link" data-en="Elections" data-ne="निर्वाचन">Elections</a>
+            <a href="#implementation" class="nav-link" data-en="Tracker" data-ne="ट्र्याकर">Tracker</a>
+            <a href="#updates" class="nav-link" data-en="Latest Updates" data-ne="ताजा अपडेट">Latest Updates</a>
+          </div>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <!-- GitHub Link -->
+        <a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" class="nav-github-link" aria-label="GitHub Repository" title="Star on GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span class="nav-github-stars" id="navGithubStars" style="display: none;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span class="count-number">0</span>
+          </span>
+        </a>
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Switch to Nepali">
+          <span class="lang-label">ने</span>
+        </button>
+        <button data-theme-toggle aria-label="Switch to light mode" class="theme-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <p class="page-header-label" data-en="Karki Aayog Report" data-ne="कार्की आयोग प्रतिवेदन">Karki Aayog Report</p>
+        <h1 class="page-header-title" data-en="What Happened Since" data-ne="त्यसपछि के भयो">What Happened Since</h1>
+        <p class="page-header-subtitle" data-en="The political transformation that followed the report, including elections, accountability, implementation, and the latest developments." data-ne="प्रतिवेदनपछिको राजनीतिक रूपान्तरण, निर्वाचन, जवाफदेहिता, कार्यान्वयन, र ताजा घटनाहरू।">The political transformation that followed the report, including elections, accountability, implementation, and the latest developments.</p>
+        <div class="page-header-actions">
+          <a href="./index.html" class="page-header-back" data-en="← Read the Commission Report" data-ne="← आयोग प्रतिवेदन पढ्नुहोस्">← Read the Commission Report</a>
+          <a href="https://github.com/Sonamkhadka/karkiaayog/edit/main/updates.json" target="_blank" rel="noopener noreferrer" class="contribute-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span data-en="Add a news update on GitHub" data-ne="GitHub मा समाचार थप्नुहोस्">Add a news update on GitHub</span>
+          </a>
+        </div>
+        <div class="current-status-grid" aria-label="Current status summary">
+          <div class="current-status-card">
+            <span class="current-status-label" data-en="Last Verified" data-ne="अन्तिम जाँच">Last Verified</span>
+            <strong>25 Apr 2026</strong>
+          </div>
+          <div class="current-status-card">
+            <span class="current-status-label" data-en="Home Affairs" data-ne="गृह मन्त्रालय">Home Affairs</span>
+            <strong data-en="PM Shah holding portfolio" data-ne="प्रधानमन्त्री शाहकै जिम्मा">PM Shah holding portfolio</strong>
+          </div>
+          <div class="current-status-card">
+            <span class="current-status-label" data-en="Parliament" data-ne="संसद">Parliament</span>
+            <strong data-en="April 30 session suspended" data-ne="अप्रिल ३० बैठक स्थगित">April 30 session suspended</strong>
+          </div>
+          <div class="current-status-card">
+            <span class="current-status-label" data-en="Report Debate" data-ne="प्रतिवेदन बहस">Report Debate</span>
+            <strong data-en="Implementation contested" data-ne="कार्यान्वयन विवादित">Implementation contested</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="global-comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">14</span>
+          <h2 class="section-title" data-en="Global Gen-Z Comparison" data-ne="विश्वव्यापी जेन-जी तुलना">Global Gen-Z Comparison</h2>
+        </div>
+        <p class="section-intro" data-en="Nepal's uprising was not isolated. Across South Asia, youth-led movements have toppled leaders in their 70s, driven by digital organisation and deep systemic frustration." data-ne="नेपालको विद्रोह एक्लो थिएन। दक्षिण एसियाभर, युवा-नेतृत्वका आन्दोलनहरूले ७० वर्षका नेताहरूलाई उखेल्छ, डिजिटल संगठन र गहिरो प्रणालीगत निराशाबाट प्रेरित भएर।">Nepal's uprising was not isolated. Across South Asia, youth-led movements have toppled leaders in their 70s, driven by digital organisation and deep systemic frustration.</p>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th data-en="Country" data-ne="देश">Country</th>
+                <th data-en="Year" data-ne="वर्ष">Year</th>
+                <th data-en="Trigger" data-ne="कारण">Trigger</th>
+                <th data-en="Deaths" data-ne="मृत्यु">Deaths</th>
+                <th data-en="Outcome" data-ne="परिणाम">Outcome</th>
+                <th data-en="Leader's Age" data-ne="नेताको उमेर">Leader's Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="comparison-row-highlight">
+                <td><strong>Nepal</strong></td>
+                <td>2025</td>
+                <td>Social media ban + corruption</td>
+                <td>76</td>
+                <td>PM resigned, elections, RSP landslide</td>
+                <td>73</td>
+              </tr>
+              <tr>
+                <td><strong>Bangladesh</strong></td>
+                <td>2024</td>
+                <td>Job quota protests</td>
+                <td>300+</td>
+                <td>PM Hasina fled to India, interim government</td>
+                <td>76</td>
+              </tr>
+              <tr>
+                <td><strong>Sri Lanka</strong></td>
+                <td>2022</td>
+                <td>Economic crisis, Aragalaya movement</td>
+                <td>9+</td>
+                <td>President Rajapaksa fled, new elections</td>
+                <td>74</td>
+              </tr>
+              <tr>
+                <td><strong>Thailand</strong></td>
+                <td>2020</td>
+                <td>Democracy and monarchy reform</td>
+                <td>2+</td>
+                <td>Ongoing reforms, new constitution demands</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title" data-en="Common Threads" data-ne="साझा विशेषताहरू">Common Threads</h3>
+        <div class="common-threads-grid">
+          <div class="thread-card">Gen Z / youth-led (40%+ of population under 28)</div>
+          <div class="thread-card">Leaderless or loosely organised via social media</div>
+          <div class="thread-card">Triggered by specific event but fuelled by deep systemic frustration</div>
+          <div class="thread-card">Leaders toppled were all 70+ years old</div>
+          <div class="thread-card">Digital platforms central to organisation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Election Results Section -->
+    <section class="section" id="election-results">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">15</span>
+          <h2 class="section-title" data-en="2026 Election Results" data-ne="२०२६ निर्वाचन परिणाम">2026 Election Results</h2>
+        </div>
+        <p class="section-intro" data-en="On 5 March 2026, Nepal held general elections. The Rastriya Swatantra Party won a historic near-two-thirds majority, marking the most decisive electoral shift in Nepal's democratic history." data-ne="५ मार्च २०२६ मा, नेपालमा आम निर्वाचन भयो। राष्ट्रिय स्वतन्त्र पार्टीले ऐतिहासिक दुई-तिहाइ नजिकको बहुमत जित्यो, नेपालको लोकतान्त्रिक इतिहासमा सबैभन्दा निर्णायक चुनावी परिवर्तन चिन्हित गर्दै।">On 5 March 2026, Nepal held general elections. The Rastriya Swatantra Party won a historic near-two-thirds majority, marking the most decisive electoral shift in Nepal's democratic history.</p>
+
+        <div class="kpi-row">
+          <div class="kpi-card kpi-deaths"><span class="kpi-value">182/275</span><span class="kpi-label" data-en="RSP Seats Won" data-ne="RSP सिट जित">RSP Seats Won</span></div>
+          <div class="kpi-card"><span class="kpi-value" data-count="915000">0</span><span class="kpi-label" data-en="First-Time Voters" data-ne="पहिलोपटक मतदाता">First-Time Voters</span></div>
+          <div class="kpi-card"><span class="kpi-value">~60%</span><span class="kpi-label" data-en="Voter Turnout" data-ne="मतदान दर">Voter Turnout</span></div>
+          <div class="kpi-card"><span class="kpi-value">⅔</span><span class="kpi-label" data-en="Prior Lawmakers Didn't Contest" data-ne="पूर्व सांसदले उम्मेदवारी दिएनन्">Prior Lawmakers Didn't Contest</span></div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h3 class="chart-title" data-en="Parliament Seats: 2022 vs 2026" data-ne="संसद सिट: २०२२ बनाम २०२६">Parliament Seats: 2022 vs 2026</h3>
+            <p class="chart-desc" data-en="How the political landscape transformed in a single election cycle." data-ne="एउटै निर्वाचन चक्रमा राजनीतिक परिदृश्य कसरी रूपान्तरण भयो।">How the political landscape transformed in a single election cycle.</p>
+            <div class="chart-wrap chart-wrap-bar"><canvas id="electionSeatsChart"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title" data-en="2026 PR Vote Share" data-ne="२०२६ PR मत हिस्सा">2026 PR Vote Share</h3>
+            <p class="chart-desc" data-en="Proportional representation vote share in the 2026 general election." data-ne="२०२६ आम निर्वाचनमा समानुपातिक प्रतिनिधित्व मत हिस्सा।">Proportional representation vote share in the 2026 general election.</p>
+            <div class="chart-wrap"><canvas id="electionVoteShareChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Tracker Section -->
+    <section class="section section-dark" id="implementation">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">16</span>
+          <h2 class="section-title" data-en="Implementation Tracker" data-ne="कार्यान्वयन ट्र्याकर">Implementation Tracker</h2>
+        </div>
+        <p class="section-intro" data-en="Tracking the implementation status of the Karki Commission's recommendations based on public reporting. Updated as of 25 April 2026." data-ne="सार्वजनिक रिपोर्टिङका आधारमा कार्की आयोगका सिफारिसहरूको कार्यान्वयन स्थिति ट्र्याक गर्दै। २५ अप्रिल २०२६ सम्म अद्यावधिक।">Tracking the implementation status of the Karki Commission's recommendations based on public reporting. Updated as of 25 April 2026.</p>
+
+        <div class="tracker-summary">
+          <div class="tracker-stat tracker-done"><span class="tracker-stat-value">2</span><span class="tracker-stat-label" data-en="Completed" data-ne="सम्पन्न">Completed</span></div>
+          <div class="tracker-stat tracker-progress"><span class="tracker-stat-value">3</span><span class="tracker-stat-label" data-en="In Progress" data-ne="प्रगतिमा">In Progress</span></div>
+          <div class="tracker-stat tracker-not-started"><span class="tracker-stat-value">8</span><span class="tracker-stat-label" data-en="Not Started / No Public Action Found" data-ne="सुरु नभएको / सार्वजनिक कारबाही भेटिएन">Not Started / No Public Action Found</span></div>
+        </div>
+        <p class="tracker-note" data-en="This tracker records public developments only. It is not a legal finding and should be read with the linked source material." data-ne="यो ट्र्याकरले सार्वजनिक घटनाक्रम मात्र टिप्छ। यो कानुनी निष्कर्ष होइन र स्रोत सामग्रीसँगै पढ्नुपर्छ।">This tracker records public developments only. It is not a legal finding and should be read with the linked source material.</p>
+
+        <div class="tracker-list">
+          <div class="tracker-item status-done">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Declare 8-9 September as martyrs days</h4>
+              <p>Cabinet decision 27 March 2026.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-done">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>45 individuals declared national martyrs</h4>
+              <p>Cabinet decision 4 November 2025, reaffirmed 27 March 2026.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-in-progress">
+            <div class="tracker-status-icon">
+              <div class="spinner"></div>
+            </div>
+            <div class="tracker-content">
+              <h4>Criminal investigation against Oli, Lekhak, Khapung</h4>
+              <p>Oli and Lekhak were arrested on 28 March and released on 9 April following a Supreme Court order, with instructions to appear when required. No public arrest of Khapung found.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-in-progress">
+            <div class="tracker-status-icon">
+              <div class="spinner"></div>
+            </div>
+            <div class="tracker-content">
+              <h4>Implement Karki Commission report</h4>
+              <p>Cabinet committed to implementation on 27 March. Implementation is now politically contested, and the home minister who led early arrests resigned on 22 April.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-in-progress">
+            <div class="tracker-status-icon">
+              <div class="spinner"></div>
+            </div>
+            <div class="tracker-content">
+              <h4>Action against 4 senior officials (Section 182)</h4>
+              <p>Former Kathmandu CDO Chhabilal Rijal was arrested on 31 March. No public action found yet for Duwadi, Aryal, or Thapa.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Departmental action against 5 Nepal Police officers</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Warning to current IGP Dan Bahadur Karki</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Departmental action against 3 APF officers</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Military Act action against 4 Army commanders</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Investigate TOB group members</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Deep investigation into Day 2 using CCTV/BTS data</h4>
+              <p>No public action found. This remains one of the most disputed gaps, with opposition reviews arguing that the report did not adequately analyse the September 9 violence.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>NID accountability (2 officials)</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+          <div class="tracker-item status-not-started">
+            <div class="tracker-status-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="tracker-content">
+              <h4>Reward brave individuals + Ekta Shah scholarship</h4>
+              <p>No public action reported.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Latest Updates -->
+    <section class="section" id="updates">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Latest Updates" data-ne="ताजा अपडेटहरू">Latest Updates</h2>
+          <p class="section-subtitle" data-en="Recent developments since the Karki Commission report was published." data-ne="कार्की आयोगको प्रतिवेदन प्रकाशित भएदेखिका ताजा घटनाहरू।">Recent developments since the Karki Commission report was published.</p>
+        </div>
+        <div class="timeline-track" id="updates-track">
+          <p class="updates-loading" style="color: var(--color-text-muted); font-size: var(--text-sm);" data-en="Loading updates…" data-ne="अपडेट लोड हुँदैछ…">Loading updates…</p>
+        </div>
+        <div class="contribute-cta">
+          <a href="https://github.com/Sonamkhadka/karkiaayog/edit/main/updates.json" target="_blank" rel="noopener noreferrer" class="contribute-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span data-en="Add a news update on GitHub" data-ne="GitHub मा समाचार थप्नुहोस्">Add a news update on GitHub</span>
+          </a>
+          <p class="contribute-note" data-en="No cloning needed — GitHub opens an editor in your browser. Your change goes through a pull request before going live." data-ne="क्लोन गर्न पर्दैन — GitHub ले ब्राउजरमा सम्पादक खोल्छ।">No cloning needed — GitHub opens an editor in your browser. Your change goes through a pull request before going live.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rate this site -->
+    <div class="rate-banner">
+      <div class="container">
+        <div class="rate-banner-inner">
+          <div class="rate-banner-text">
+            <p class="rate-banner-heading" data-en="Was this page helpful?" data-ne="के यो पृष्ठ उपयोगी थियो?">Was this page helpful?</p>
+            <p class="rate-banner-sub" data-en="A GitHub star takes one second and helps more people find this resource." data-ne="GitHub स्टार एक सेकेन्डमा हुन्छ र यो स्रोत थप मानिसहरूलाई भेट्टाउन मद्दत गर्छ।">A GitHub star takes one second and helps more people find this resource.</p>
+          </div>
+          <a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" class="rate-banner-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span data-en="Star on GitHub" data-ne="GitHub मा स्टार गर्नुहोस्">Star on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3 data-en="About This Site" data-ne="यस साइटबारे">About This Site</h3>
+            <p data-en="This website summarises the findings of the Gauri Bahadur Karki Commission report on the September 2025 Gen-Z protests in Nepal. It was created to make the 900+ page report accessible to every citizen. All data is sourced from published reports and official records." data-ne="यो वेबसाइटले सेप्टेम्बर २०२५ को नेपालको जेन-जी आन्दोलनमा गौरी बहादुर कार्की आयोग प्रतिवेदनका निष्कर्षहरू सारांशित गर्छ। यो ९००+ पृष्ठको प्रतिवेदन हरेक नागरिकका लागि पहुँचयोग्य बनाउन सिर्जना गरिएको हो।">This website summarises the findings of the Gauri Bahadur Karki Commission report on the September 2025 Gen-Z protests in Nepal. It was created to make the 900+ page report accessible to every citizen. All data is sourced from published reports and official records.</p>
+            <p class="footer-open-source" data-en="This is an open-source public-interest project. If you spot an error, have better sourcing, or want to improve the site, contribute on GitHub." data-ne="यो सार्वजनिक हितका लागि खुला-स्रोत परियोजना हो। यदि तपाईंले कुनै त्रुटि भेट्नुभयो, राम्रो स्रोत छ, वा साइट सुधार गर्न चाहनुहुन्छ भने GitHub मा योगदान गर्नुहोस्।">This is an open-source public-interest project. If you spot an error, have better sourcing, or want to improve the site, contribute on GitHub.</p>
+            <p class="footer-repo"><a href="https://github.com/Sonamkhadka/karkiaayog" target="_blank" rel="noopener noreferrer" data-en="Contribute on GitHub" data-ne="GitHub मा योगदान गर्नुहोस्">Contribute on GitHub</a></p>
+          </div>
+          <div class="footer-sources">
+            <h3>Sources</h3>
+            <ul>
+              <li><a href="https://kathmandupost.com/national/2026/03/25/karki-commission-s-recommendations-on-the-gen-z-protests-explained-in-10-points" target="_blank" rel="noopener noreferrer">Kathmandu Post - 10 Points Explained</a></li>
+              <li><a href="https://www.cnn.com/2026/03/28/asia/nepal-kp-sharma-oli-arrested-protests-intl-hnk" target="_blank" rel="noopener noreferrer">CNN - Oli Arrested</a></li>
+              <li><a href="https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests" target="_blank" rel="noopener noreferrer">Kathmandu Post - UML Nationwide Protests</a></li>
+              <li><a href="https://www.bbc.com/news/articles/cn89ry7y835o" target="_blank" rel="noopener noreferrer">BBC - Oli Arrested Over Protest Crackdown</a></li>
+              <li><a href="https://thehimalayantimes.com/nepal/ministers-of-balen-led-cabinet" target="_blank" rel="noopener noreferrer">Himalayan Times - Balen Cabinet</a></li>
+              <li><a href="https://en.himalpress.com/45-victims-of-gen-z-protests-declared-martyrs-with-namelist/" target="_blank" rel="noopener noreferrer">HimalPress - 45 Declared Martyrs</a></li>
+              <li><a href="https://kathmandupost.com/national/2026/04/09/oli-lekhak-released-following-court-order" target="_blank" rel="noopener noreferrer">Kathmandu Post - Oli and Lekhak Released</a></li>
+              <li><a href="https://www.aljazeera.com/news/2026/4/22/nepals-home-minister-resigns-second-cabinet-exit-in-one-month" target="_blank" rel="noopener noreferrer">Al Jazeera - Home Minister Resigns</a></li>
+              <li><a href="https://www.theweek.in/wire-updates/international/2026/04/23/nepal-president-paudel-suspends-parliament-session-of-both-houses-without-convening.html" target="_blank" rel="noopener noreferrer">The Week/PTI - Parliament Session Suspended</a></li>
+              <li><a href="https://english.ratopati.com/story/59139/congress-study-report-says-three-major-problems-in-karki-commission-report-on-genji-movement" target="_blank" rel="noopener noreferrer">Ratopati - Nepali Congress Review</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-en="Created to educate and inform. Data from published reports and official records. Not affiliated with any political party or government body." data-ne="शिक्षित र सूचित गर्न सिर्जना गरिएको। प्रकाशित प्रतिवेदन र आधिकारिक अभिलेखबाट डाटा। कुनै राजनीतिक दल वा सरकारी निकायसँग सम्बद्ध छैन।">Created to educate and inform. Data from published reports and official records. Not affiliated with any political party or government body.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

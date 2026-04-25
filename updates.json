@@ -1,5 +1,61 @@
 [
   {
+    "date": "April 23, 2026",
+    "tag": "Government",
+    "title": "President Paudel suspends Parliament session before it convenes",
+    "body": "President Ramchandra Paudel suspended the session of both houses of Parliament that had been summoned for April 30. The President's Office cited special reasons, while senior Nepali Congress leader Arjun Narsingh KC called the move unprecedented and surprising.",
+    "source": "https://www.theweek.in/wire-updates/international/2026/04/23/nepal-president-paudel-suspends-parliament-session-of-both-houses-without-convening.html"
+  },
+  {
+    "date": "April 22, 2026",
+    "tag": "Government",
+    "title": "Home Minister Sudan Gurung resigns",
+    "body": "Sudan Gurung resigned as home minister less than a month after taking office, following scrutiny over investments and alleged links to businessman Deepak Bhatta. Prime Minister Balendra Shah is temporarily overseeing the Ministry of Home Affairs.",
+    "source": "https://www.aljazeera.com/news/2026/4/22/nepals-home-minister-resigns-second-cabinet-exit-in-one-month"
+  },
+  {
+    "date": "April 15, 2026",
+    "tag": "Review",
+    "title": "Nepali Congress review questions Karki Commission findings",
+    "body": "A Nepali Congress internal study committee submitted a 45-page review of the Karki Commission report. According to Ratopati, the review questioned the report's mandate, factual depth, actionability, and limited analysis of the September 9 violence.",
+    "source": "https://english.ratopati.com/story/59139/congress-study-report-says-three-major-problems-in-karki-commission-report-on-genji-movement"
+  },
+  {
+    "date": "April 9, 2026",
+    "tag": "Legal",
+    "title": "Oli and Lekhak released following court order",
+    "body": "Former Prime Minister KP Sharma Oli and former Home Minister Ramesh Lekhak were released after a Supreme Court order. Police said they must appear before authorities when required, while the investigation linked to the Gen-Z protest deaths continues.",
+    "source": "https://kathmandupost.com/national/2026/04/09/oli-lekhak-released-following-court-order"
+  },
+  {
+    "date": "March 31, 2026",
+    "tag": "Accountability",
+    "title": "Former Kathmandu CDO Chhabi Rijal arrested",
+    "body": "Police arrested former Kathmandu Chief District Officer Chhabilal Rijal in connection with the Gen-Z protest crackdown investigation. The arrest was linked to implementation of the Karki Commission report.",
+    "source": "https://kathmandupost.com/national/2026/03/31/police-arrest-former-kathmandu-cdo-chhabilal-rijal"
+  },
+  {
+    "date": "March 30, 2026",
+    "tag": "Legal",
+    "title": "Supreme Court refuses interim relief for KP Sharma Oli",
+    "body": "The Supreme Court declined to issue an interim release order for former PM KP Sharma Oli and instead asked the government to justify the legal grounds for his arrest and detention.",
+    "source": "https://kathmandupost.com/national/2026/03/30/supreme-court-refuses-interim-relief-to-oli-seeks-grounds-for-detention"
+  },
+  {
+    "date": "March 30, 2026",
+    "tag": "Political",
+    "title": "CPN-UML Secretary Mahesh Basnet speaks out against impending arrest",
+    "body": "CPN-UML Secretary Mahesh Basnet publicly accused the new government of attempting to weaken protests by preparing to arrest him on fake complaints. He denied rumors that he was 'on the run' following the arrests of Oli and Lekhak.",
+    "source": "https://myrepublica.nagariknetwork.com/news/govt-trying-to-weaken-movement-against-olis-arrest-by-arresting-me-basnet-94-63.html"
+  },
+  {
+    "date": "March 29, 2026",
+    "tag": "Political",
+    "title": "UML vows nationwide protests following Oli arrest",
+    "body": "CPN-UML announced nationwide protests following the arrest of party chairman KP Sharma Oli. The party called the arrest politically motivated and demanded his immediate release.",
+    "source": "https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests"
+  },
+  {
     "date": "March 28, 2026",
     "tag": "Accountability",
     "title": "Former PM KP Sharma Oli arrested",
@@ -9,15 +65,8 @@
   {
     "date": "March 25, 2026",
     "tag": "Report",
-    "title": "Karki Commission report made public",
-    "body": "The full Gauri Bahadur Karki Commission report was officially released to the public. The 900+ page document details findings on the use of lethal force, intelligence failures, and accountability for the 76 deaths during the September 2025 protests.",
+    "title": "Karki Commission report enters public domain",
+    "body": "The Gauri Bahadur Karki Commission report entered the public domain after excerpts and copies circulated through media. The government also decided to make the investigation report public by archiving it in the Federal Parliament Secretariat library.",
     "source": "https://kathmandupost.com/national/2026/03/25/karki-commission-s-recommendations-on-the-gen-z-protests-explained-in-10-points"
-  },
-  {
-    "date": "March 29, 2026",
-    "tag": "Political",
-    "title": "UML vows nationwide protests following Oli arrest",
-    "body": "CPN-UML announced nationwide protests following the arrest of party chairman KP Sharma Oli. The party called the arrest politically motivated and demanded his immediate release.",
-    "source": "https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests"
   }
 ]

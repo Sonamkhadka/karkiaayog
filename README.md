@@ -12,8 +12,8 @@ This project makes the 900+ page judicial inquiry commission report accessible t
 - Interactive charts (Chart.js) for casualties, ammunition, and accountability data
 - Bilingual English/Nepali language toggle
 - 45 declared martyrs memorial with names and districts
-- Complete political timeline from the uprising through to Oli's arrest (28 March 2026) and UML counter-protests (29 March 2026)
-- Balen Shah cabinet with all 14 ministers
+- "What Happened Since" page for elections, accountability tracking, legal updates, and government changes
+- Implementation tracker updated through 25 April 2026
 - Dark/light mode toggle
 - Responsive design for mobile and desktop
 - Scroll-reveal animations
@@ -90,6 +90,8 @@ See the [open issues](https://github.com/Sonamkhadka/karkiaayog/issues) for curr
 All data is sourced from published reports and official records:
 
 - [Kathmandu Post - Karki Commission 10 Points](https://kathmandupost.com/national/2026/03/25/karki-commission-s-recommendations-on-the-gen-z-protests-explained-in-10-points)
+- [Nepal Views - Decision to Unveil Report](https://english.nepalviews.com/2026/03/25/decision-to-unveil-three-documents-including-the-investigation-commission-s-report)
+- [Ratopati - Report Leak Context](https://english.ratopati.com/story/55541/home-minister-aryal-says-the-government-has-not-received-the-electronic-version)
 - [Human Rights Watch](https://www.hrw.org/news/2026/02/12/nepal-publish-reports-on-violent-crackdowns-on-protests)
 - [Harvard Atrocity Prevention Lab](https://hsph.harvard.edu/atrocity-prevention-lab/news/the-2025-gen-z-uprising-in-nepal-a-three-part-analysis/)
 - [CNN - Oli Arrested](https://www.cnn.com/2026/03/28/asia/nepal-kp-sharma-oli-arrested-protests-intl-hnk)
@@ -97,6 +99,10 @@ All data is sourced from published reports and official records:
 - [Himalayan Times - Balen Cabinet](https://thehimalayantimes.com/nepal/ministers-of-balen-led-cabinet)
 - [HimalPress - 45 Declared Martyrs](https://en.himalpress.com/45-victims-of-gen-z-protests-declared-martyrs-with-namelist/)
 - [Kathmandu Post - UML Protests](https://kathmandupost.com/national/2026/03/29/as-government-arrests-oli-uml-vows-nationwide-protests)
+- [Kathmandu Post - Oli and Lekhak Released](https://kathmandupost.com/national/2026/04/09/oli-lekhak-released-following-court-order)
+- [Al Jazeera - Home Minister Resigns](https://www.aljazeera.com/news/2026/4/22/nepals-home-minister-resigns-second-cabinet-exit-in-one-month)
+- [The Week/PTI - Parliament Session Suspended](https://www.theweek.in/wire-updates/international/2026/04/23/nepal-president-paudel-suspends-parliament-session-of-both-houses-without-convening.html)
+- [Ratopati - Nepali Congress Review](https://english.ratopati.com/story/59139/congress-study-report-says-three-major-problems-in-karki-commission-report-on-genji-movement)
 
 ## License
 
